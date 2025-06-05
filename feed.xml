@@ -1,1 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://harmgriffioen.github.io/DelftTILab/feed.xml" rel="self" type="application/atom+xml" /><link href="https://harmgriffioen.github.io/DelftTILab/" rel="alternate" type="text/html" /><updated>2025-06-05T09:58:23+00:00</updated><id>https://harmgriffioen.github.io/DelftTILab/feed.xml</id><title type="html">Delft Threat Intelligence Lab</title><subtitle>The Delft Threat Intelligence Lab is a research group at the Delft University of Technology, focusing on cybersecurity and threat intelligence.</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://harmgriffioen.github.io/DelftTILab/feed.xml" rel="self" type="application/atom+xml" /><link href="https://harmgriffioen.github.io/DelftTILab/" rel="alternate" type="text/html" /><updated>2025-06-05T10:08:41+00:00</updated><id>https://harmgriffioen.github.io/DelftTILab/feed.xml</id><title type="html">Delft Threat Intelligence Lab</title><subtitle>The Delft Threat Intelligence Lab is a research group at the Delft University of Technology, focusing on cybersecurity and threat intelligence.</subtitle><entry><title type="html">Can a Tarpit Clean Up the Internet?</title><link href="https://harmgriffioen.github.io/DelftTILab/2025/06/05/Can-a-Tarpit-Clean-Up-the-Internet.html" rel="alternate" type="text/html" title="Can a Tarpit Clean Up the Internet?" /><published>2025-06-05T00:00:00+00:00</published><updated>2025-06-05T10:05:47+00:00</updated><id>https://harmgriffioen.github.io/DelftTILab/2025/06/05/Can-a-Tarpit-Clean-Up-the-Internet</id><content type="html" xml:base="https://harmgriffioen.github.io/DelftTILab/2025/06/05/Can-a-Tarpit-Clean-Up-the-Internet.html"><![CDATA[<h1 id="can-a-tarpit-clean-up-the-internet-a-closer-look-at-worm-containment-strategies">Can a Tarpit Clean Up the Internet? A Closer Look at Worm Containment Strategies</h1>
+
+<p><em>Published on June 5, 2025 by the Delft Threat Intelligence Lab</em></p>
+
+<p>In the ever-evolving landscape of cybersecurity threats, Internet worms remain a persistent challenge. These self-replicating programs can spread rapidly across networks, exploiting vulnerabilities and causing widespread disruption. A recent study by researchers at TU Delft explores an intriguing question: Can we use “tarpits” to slow down or even halt the spread of these worms?</p>
+
+<h2 id="what-is-a-tarpit">What Is a Tarpit?</h2>
+
+<p>A tarpit is a network defense mechanism designed to intentionally delay or trap malicious connections. By responding slowly or not at all to certain network requests, a tarpit can tie up the resources of an attacking system, effectively slowing down its ability to spread malware or perform other malicious activities.</p>
+
+<h2 id="the-study">The Study</h2>
+
+<p>The research, presented at the 2023 IEEE European Symposium on Security and Privacy Workshops, investigates the feasibility of tarpits as a defense against Internet worms. The team employed:</p>
+
+<ul>
+  <li><strong>Simulations of Worm Propagation</strong>: Modeling how different types of worms spread across networks.</li>
+  <li><strong>Tarpit Implementations</strong>: Deploying several tarpit strategies to assess their practical effectiveness.</li>
+  <li><strong>Performance Metrics</strong>: Measuring delay, resource consumption, and impact on worm containment.</li>
+</ul>
+
+<h2 id="key-findings">Key Findings</h2>
+
+<ul>
+  <li><strong>Effectiveness Depends on Context</strong>: Tarpit success varies significantly depending on the worm’s behavior and the network’s structure.</li>
+  <li><strong>Trade-offs in Performance</strong>: Tarpits can consume system resources and introduce delays, potentially affecting legitimate traffic.</li>
+  <li><strong>Supportive Role</strong>: Tarpits are most effective as part of a layered security approach, complementing other tools like firewalls and detection systems.</li>
+</ul>
+
+<h2 id="why-this-matters">Why This Matters</h2>
+
+<p>This study revisits an underexplored method in cybersecurity and evaluates its practical viability in modern networks. While tarpits are not a silver bullet, they can be useful in specific scenarios, particularly when trying to slow down the early stages of a worm outbreak.</p>
+
+<h2 id="read-the-paper">Read the Paper</h2>
+
+<p>You can access the full publication on IEEE Xplore:</p>
+
+<p><a href="https://ieeexplore.ieee.org/document/10179467">Could you clean up the Internet with a Pit of Tar? Investigating tarpit feasibility on Internet worms</a></p>
+
+<hr />
+
+<p><em>This blog post summarizes research conducted by the Delft Threat Intelligence Lab. For a complete explanation of methods and results, refer to the original paper.</em></p>]]></content><author><name>harm-griffioen</name></author><category term="botnets," /><category term="tarpit," /><category term="Mirai" /><summary type="html"><![CDATA[Can a Tarpit Clean Up the Internet? A Closer Look at Worm Containment Strategies]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harmgriffioen.github.io/DelftTILab/images/tarpit.png" /><media:content medium="image" url="https://harmgriffioen.github.io/DelftTILab/images/tarpit.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
