@@ -9,7 +9,7 @@ tags: botnets, tarpit, Mirai
 
 *Published on June 5, 2025 by the Delft Threat Intelligence Lab*
 
-In the ever-evolving landscape of cybersecurity threats, Internet worms remain a persistent challenge. These self-replicating programs can spread rapidly across networks, exploiting vulnerabilities and causing widespread disruption. A recent study by researchers at TU Delft explores an intriguing question: Can we use "tarpits" to slow down or even halt the spread of these worms?
+In the ever-evolving landscape of cybersecurity threats, Internet worms remain a persistent challenge. These self-replicating programs can spread rapidly across networks, exploiting vulnerabilities and causing widespread disruption. A recent study by researchers at the Threat Intelligence Lab of the TU Delft explores an intriguing question: Can we use "tarpits" to slow down or even halt the spread of these worms?
 
 ## What Is a Tarpit?
 
