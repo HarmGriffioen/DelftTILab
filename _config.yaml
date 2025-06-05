@@ -1,19 +1,22 @@
 # site properties and page defaults
-title: HarmGriffioen
-subtitle: 
-description: An engaging 1-3 sentence description of your lab.
+title: Delft Threat Intelligence Lab
+subtitle:
+  "Cybersecurity and Threat Intelligence Research at Delft University of Technology"
+description: The Delft Threat Intelligence Lab is a research group at the Delft University of Technology, focusing on cybersecurity and threat intelligence.
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
+header-dark: true
+show-subtitle: false
 
 # site social media and other links
-links:
-  email: contact@HarmGriffioen.com
-  orcid: 0000-0001-8713-9213
-  google-scholar: ETJoidYAAAAJ
-  github: HarmGriffioen
-  twitter: HarmGriffioen
-  youtube: HarmGriffioen
+#links:
+ # email: h.j.griffioen@tudelft.nl
+  #orcid: 0009-0006-7990-7802
+  #google-scholar: fbUtrQcAAAAJ
+  #github: HarmGriffioen
+  #twitter: HarmGriffioen
+  #youtube: HarmGriffioen
 
 ### jekyll settings
 

@@ -7,21 +7,17 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-wrench" %}Projects
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Below, you’ll find an overview of our current and past projects, open-source software, and curated datasets. Whenever possible, we make our work openly available to support collaboration and reproducibility in the security research community.
 
-{% include tags.html tags="publication, resource, website" %}
+If you use or build on any of our work, we’d love to hear from you!
 
-{% include search-info.html %}
 
-{% include section.html %}
+<!-- {% include tags.html tags="datasets, tools" %} -->
 
-## Featured
+<!-- {% include search-info.html %} -->
 
-{% include list.html component="card" data="projects" filter="group == 'featured'" %}
 
-{% include section.html %}
+## Our Projects
 
-## More
+{% include list.html component="card" data="projects" style="small" %}
 
-{% include list.html component="card" data="projects" filter="!group" style="small" %}

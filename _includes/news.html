@@ -1,0 +1,18 @@
+{% if include.lookup %}
+  {% assign post = site.posts 
+    | where_exp: "post", "post.slug == include.lookup"
+    | first
+    | default: include
+  %}
+{% else %}
+  {% assign post = include %}
+{% endif %}
+
+
+{% assign description = post.description %}
+{% assign title = post.title %}
+{% assign date = post.date | date: "%B %d, %Y" %}
+
+  <h5>{% include icon.html icon="fa-regular fa-calendar" %}
+  <span><b>{{ date }}</b></span> - {{ title }} </h5>
+  <p>{{ description }}</p>
