@@ -1,7 +1,7 @@
 ---
 name: Maarten Weyns 
 image: images/maarten.jpeg
-role: phd-student 
+role: phd
 affiliation: TU Delft
 aliases:
   - M.B.M. Weyns
