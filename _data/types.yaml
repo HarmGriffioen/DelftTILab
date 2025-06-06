@@ -22,9 +22,9 @@ programmer:
   icon: fa-solid fa-code
   description: Programmer
 
-mascot:
-  icon: fa-solid fa-dog
-  description: Mascot
+advisor:
+  icon: fa-solid fa-chalkboard-teacher
+  description: Advisor
 
 # general
 
