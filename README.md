@@ -5,6 +5,6 @@
 
   # HarmGriffioen's Website
 
-  Visit **[harmgriffioen.github.io/DelftTILab](https://harmgriffioen.github.io/DelftTILab)** 🚀
+  Visit **[delftintellab.com](https://delftintellab.com)** 🚀
 
   _Built with [Lab Website Template](https://greene-lab.gitbook.io/lab-website-template-docs)_
