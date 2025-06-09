@@ -5,6 +5,7 @@ role: principal-investigator
 affiliation: TU Delft
 aliases:
   - H.J. Griffioen
+  - Harm Griffioen
 links:
   email: h.j.griffioen@tudelft.nl
   google-scholar: fbUtrQcAAAAJ
