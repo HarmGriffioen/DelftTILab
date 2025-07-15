@@ -12,5 +12,6 @@ Great research starts with great people. Here you’ll find all current and form
 {% include section.html %}
 
 {% include list.html data="members" component="portrait" filter="role == 'principal-investigator'" %}
-{% include list.html data="members" component="portrait" filter="role != 'principal-investigator' && role != 'advisor'" %}
-{% include list.html data="members" component="portrait" filter="role != 'principal-investigator' && role == 'advisor'" %}
+{% include list.html data="members" component="portrait" filter="role != 'principal-investigator' && role != 'advisor' && role != 'postdoc'" %}
+{% include list.html data="members" component="portrait" filter="role == 'postdoc'" %}
+{% include list.html data="members" component="portrait" filter="role == 'advisor'" %}
