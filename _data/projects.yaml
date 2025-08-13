@@ -5,3 +5,11 @@
   description: A real-time list of DDoS attack victims, including attack type, target, and timestamp. Available on request.
   tags:
     - dataset
+- title: Scanning Traffic Data
+  subtitle: Anonymized Reactive Telescope Packet Captures
+  group: featured
+  image: images/reactive-telescope.png
+  description: (WIP) Anonymized dataset of scanning traffic targeting our Reactive Telescope
+  link: /projects/raid2025-informed-scanners
+  tags:
+    - dataset
