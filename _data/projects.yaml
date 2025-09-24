@@ -13,3 +13,11 @@
   link: /projects/raid2025-informed-scanners
   tags:
     - dataset
+- title: TCP SYN Payloads
+  subtitle: Irregular Internet Scans Data
+  group: featured
+  image: images/synpay.png
+  description: Traffic dataset of TCP SYN packets carrying a data payload, collected at our Network Telescope. Available on request.
+  # link: /projects/imc2025-syn-payloads
+  tags:
+    - dataset
