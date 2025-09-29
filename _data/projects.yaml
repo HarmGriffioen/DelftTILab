@@ -3,6 +3,7 @@
   group: featured
   image: images/ddos.png
   description: A real-time list of DDoS attack victims, including attack type, target, and timestamp. Available on request.
+  link: /projects/ddos-attack-list
   tags:
     - dataset
 - title: Scanning Traffic Data
