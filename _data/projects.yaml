@@ -10,7 +10,7 @@
   subtitle: Anonymized Reactive Telescope Packet Captures
   group: featured
   image: images/reactive-telescope.png
-  description: (WIP) Anonymized dataset of scanning traffic targeting our Reactive Telescope
+  description: Anonymized dataset of scanning traffic targeting our Reactive Telescope
   link: /projects/raid2025-informed-scanners
   tags:
     - dataset

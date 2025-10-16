@@ -4,13 +4,15 @@ title: "RAID 2025 Dataset"
 permalink: /projects/raid2025-informed-scanners
 ---
 
-# "Revealing Informed Scanners by Colocating Passive and Reactive Telescopes"
+# Anonymized Reactive Telescope Packet Captures
 
-Anonymized dataset of scanning traffic targeting our reactive telescope, RAID 2025 publication. Coming soon...
+The following dataset is part of the work leading to our paper *"Revealing Informed Scanners by Colocating Passive and Reactive Telescopes"* appearing in the 28th International Symposium on Research in Attacks, Intrusions and Defenses (RAID 2025).
 
-<!-- 
+The dataset contains anonymized traces of scanning traffic targeting our reactive telescope between the months of mid-March and May 2024.
 
 ## Referencing our work
+
+Preprint of the paper available [here](https://gsmaragd.github.io/publications/RAID2025/RAID2025.pdf)
 
 ```
 @inproceedings{ferrero2025revealing,
@@ -25,4 +27,6 @@ Anonymized dataset of scanning traffic targeting our reactive telescope, RAID 20
 }
 ```
 
- -->
+## Obtaining the data
+
+Please [contact Dario Ferrero](mailto:d.ferrero@tudelft.nl) to receive the data.
