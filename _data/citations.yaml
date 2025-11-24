@@ -1,5 +1,30 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
+- id: doi:10.1145/3730567.3764498
+  title: Have you SYN What I See? Analyzing TCP SYN Payloads in the Wild
+  authors:
+  - Dario Ferrero
+  - Enrico Bassetti
+  - Harm Griffioen
+  - Georgios Smaragdakis
+  publisher: Proceedings of the 2025 ACM Internet Measurement Conference
+  date: '2025-10-28'
+  link: https://doi.org/hbcc5b
+  orcid: 0009-0004-0631-055X
+  dario-ferrero: true
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1145/3730567.3764481
+  title: 'Decoy Databases: Analyzing Attacks on Public Facing Databases'
+  authors:
+  - Yuqian Song
+  - Georgios Smaragdakis
+  - Harm Griffioen
+  publisher: Proceedings of the 2025 ACM Internet Measurement Conference
+  date: '2025-10-28'
+  link: https://doi.org/hbcc5m
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1145/3646547.3688409
   title: Have you SYN me? Characterizing Ten Years of Internet Scanning
   authors:
