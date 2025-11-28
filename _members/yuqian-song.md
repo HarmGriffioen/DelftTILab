@@ -1,12 +1,13 @@
 ---
 name: Yuqian Song
-image:
+image: images/yuqian-profile.jpg
 role: phd
 affiliation: TU Delft
 aliases:
   - Y.song
 links:
   email: yuqian.song@tudelft.nl
+  orcid: 0009-0005-9010-8668
 ---
 
 Yuqian is a PhD candidate in the Cybersecurity group at Delft University of Technology, under the supervision of Prof. Georgios Smaragdakis and Prof. Harm Griffioen, since August 2024. 
