@@ -1,5 +1,5 @@
 ---
-title: Can a Tarpit Clean Up the Internet?
+title: Decoy Databases
 image: images/disk.jpg
 author: Yuqian-Song
 tags: Honeypots, Scanning, Databases, Malware
