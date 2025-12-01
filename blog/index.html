@@ -573,9 +573,126 @@
         malware
       </a>
     
+      <a href="/blog/?search=%22tag:%20conference%22" class="tag" data-tooltip='Show items with the tag "conference"'>
+        conference
+      </a>
+    
+      <a href="/blog/?search=%22tag:%20network-telescope%22" class="tag" data-tooltip='Show items with the tag "network-telescope"'>
+        network-telescope
+      </a>
+    
   </div>
 
 <div class="search-info"></div>
+
+<div class="post-excerpt-container">
+  <div class="post-excerpt">
+    
+    
+    
+
+    
+      <a href="/2025/11/28/IMC-25-TCP-SYN-Payloads.html" class="post-excerpt-image" aria-label="ACM IMC 2025 - TCP SYN Payloads">
+        <img src="/images/imc-2025-squad.jpeg" alt="ACM IMC 2025 - TCP SYN Payloads" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="post-excerpt-text">
+      <a href="/2025/11/28/IMC-25-TCP-SYN-Payloads.html">ACM IMC 2025 - TCP SYN Payloads</a>
+
+      <div class="post-info">
+  
+    
+    
+      
+      
+        
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/dario-ferrero.html" class="portrait" data-style="tiny" aria-label="Dario Ferrero">
+    
+      <i class="icon fa-solid fa-graduation-cap"></i>
+    
+
+    <img src="/images/dario-profile.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Dario Ferrero
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        PhD Student
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        TU Delft
+      </span>
+    
+  </a>
+</div>
+
+      
+    
+  
+
+  
+  
+
+  
+    <span data-tooltip="Originally published on">
+      <i class="icon fa-regular fa-calendar"></i>
+      <span>November 28, 2025</span>
+    </span>
+  
+
+  
+    <span data-tooltip="Last updated on">
+      <i class="icon fa-solid fa-clock-rotate-left"></i>
+      <span>December 01, 2025</span>
+    </span>
+  
+</div>
+
+
+  
+
+
+  <div class="tags">
+    
+      <a href="/blog?search=%22tag:%20conference%22" class="tag" data-tooltip='Show items with the tag "conference"'>
+        conference
+      </a>
+    
+      <a href="/blog?search=%22tag:%20network-telescope%22" class="tag" data-tooltip='Show items with the tag "network-telescope"'>
+        network-telescope
+      </a>
+    
+      <a href="/blog?search=%22tag:%20scanning%22" class="tag" data-tooltip='Show items with the tag "scanning"'>
+        scanning
+      </a>
+    
+  </div>
+
+
+
+
+
+      
+      
+      <p data-search="Highlights from the 2025 ACM IMC ConferencePublished on December 1st, 2025 by the Delft Threat Intelligence LabDuring the week of October 27th to the 31st, the team attended the 2025 ACM Internet Measurement Conference in Madison, WI.Yuqian presented his full paper on Decoy Databases and Dario presented his short paper on TCP SYN Payloads.The whole event has been a formative experience: we were able to attend high-level presentations and to learn about several research directions in the field of Internet Measurements. The feeling of community was strong over the course of the conference, and we hope to be back in the future Have you SYN What I See Analyzing TCP SYN Payloads in the WildThe paper addresses a form of unsolicited Internet traffic yet unexplored by the literature, that is TCP SYN packets carrying an application payload. Over two years of data collected by our Network Telescope, we record over 200 million of these events and provide a complete characterization of their content while attempting to explain the objectives behind this anomalous traffic.Key Findings Traffic is attributable to Internet Scans: we observe for almost all traffic well-known fingerprints for scanning tools and irregular header values for TCP SYNs, indicating that their origin is to be attributed to intentional scanning and not misconfigurations. OS Fingerprinting can be ruled out as an explanation: we try to determine if these scans are Operating System Fingerprinting attempts. We do so by setting up a virtualized environment and replaying subsets of TCP SYN Payload data against multiple OS versions, without finding any behavioral difference between the tested set. HTTP GETs are most common, but Zyxel scans raise concerns: the application layer payloads show that more than three quarters are simple HTTP GET scans attributable to research scans. On the other hand, we record several scans targeting TCP port 0 and Zyxel infrastructure.Why this mattersThis type of event is known to trigger interference by middleboxes and firewalls, and while previous work has hinted to the presence of this traffic in the wild , to this day no major work has provided a full overview of the requests it contains. While we observe that the majority of these can be related to studies on Internet Censorship, a significant share can be linked to suspicious reconnaissance targeting Zyxel equipment. Through the vantage point of our large Network Telescope we provide a view as complete as possible, but still warn to keep this traffic under observation.Relevant links and referencesYou can access the full publication on the ACM Digital Library: Have you SYN What I See Analyzing TCP SYN Payloads in the WildThis blog post summarizes research conducted by the Delft Threat Intelligence Lab. For a complete explanation of methods and results, refer to the original papers.">
+        Highlights from the 2025 ACM IMC Conference
+
+      </p>
+    </div>
+  </div>
+</div>
 
 <div class="post-excerpt-container">
   <div class="post-excerpt">
@@ -644,6 +761,11 @@
     </span>
   
 
+  
+    <span data-tooltip="Last updated on">
+      <i class="icon fa-solid fa-clock-rotate-left"></i>
+      <span>December 01, 2025</span>
+    </span>
   
 </div>
 
@@ -755,7 +877,7 @@
   
     <span data-tooltip="Last updated on">
       <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>November 28, 2025</span>
+      <span>December 01, 2025</span>
     </span>
   
 </div>
