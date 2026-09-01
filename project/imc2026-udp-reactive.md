@@ -14,9 +14,9 @@ For the remainder dataset in the distributed deployment, see: TODO
 
 ## Referencing our work
 
-TODO
-<!-- Preprint of the paper available [here](https://gsmaragd.github.io/publications/RAID2025/RAID2025.pdf)
+Preprint of the paper available here: (TODO)
 
+<!--
 ```
 @inproceedings{ferrero2026revealing,
    title = {Revealing Informed Scanners by Colocating Passive and Reactive Telescopes},
@@ -28,7 +28,8 @@ TODO
    doi = {},
    publisher = {Usenix Association}
 }
-``` -->
+``` 
+-->
 
 ## Obtaining the data
 
