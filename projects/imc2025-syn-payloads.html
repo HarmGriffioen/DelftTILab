@@ -43,21 +43,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Projects | Delft Threat Intelligence Lab</title>
+<title>IMC 2025 Dataset | Delft Threat Intelligence Lab</title>
 
 <link rel="icon" href="/images/icon.png">
 
-<meta name="title" content="Projects">
+<meta name="title" content="IMC 2025 Dataset">
 <meta name="description" content="Cybersecurity and Threat Intelligence Research at Delft University of Technology. The Delft Threat Intelligence Lab is a research group at the Delft University of Technology, focusing on cybersecurity and threat intelligence.">
 
-<meta property="og:title" content="Projects">
+<meta property="og:title" content="IMC 2025 Dataset">
 <meta property="og:site_title" content="Delft Threat Intelligence Lab">
 <meta property="og:description" content="Cybersecurity and Threat Intelligence Research at Delft University of Technology. The Delft Threat Intelligence Lab is a research group at the Delft University of Technology, focusing on cybersecurity and threat intelligence.">
 <meta property="og:url" content="https://delftintellab.com">
 <meta property="og:image" content="/images/share.jpg">
 <meta property="og:locale" content="en_US">
 
-<meta property="twitter:title" content="Projects">
+<meta property="twitter:title" content="IMC 2025 Dataset">
 <meta property="twitter:description" content="Cybersecurity and Threat Intelligence Research at Delft University of Technology. The Delft Threat Intelligence Lab is a research group at the Delft University of Technology, focusing on cybersecurity and threat intelligence.">
 <meta property="twitter:url" content="https://delftintellab.com">
 <meta property="twitter:card" content="summary_large_image">
@@ -73,9 +73,9 @@
     
       "@type": "WebSite",
     
-    "name": "Projects",
+    "name": "IMC 2025 Dataset",
     "description": "Cybersecurity and Threat Intelligence Research at Delft University of Technology. The Delft Threat Intelligence Lab is a research group at the Delft University of Technology, focusing on cybersecurity and threat intelligence.",
-    "headline": "Projects",
+    "headline": "IMC 2025 Dataset",
     "publisher": {
       "@type": "Organization",
       "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
@@ -521,205 +521,53 @@
   
 
   <section class="background" data-size="page">
-    <h1 id="projects">
-<i class="icon fa-solid fa-wrench"></i>Projects</h1>
+    <h1 id="anonymized-network-telescope-traffic">Anonymized Network Telescope Traffic</h1>
 
-<p>Below, you’ll find an overview of our current and past projects, open-source software, and curated datasets. Whenever possible, we make our work openly available to support collaboration and reproducibility in the security research community.</p>
+<p>The following dataset is part of the work leading to our paper <em>“Have you SYN What I See? Analyzing TCP SYN Payloads in the Wild”</em> appearing in the 2026 ACM Internet Measurement Conference (IMC 2025).</p>
 
-<p>If you use or build on any of our work, we’d love to hear from you!</p>
+<h2 id="access-to-the-data">Access to the Data</h2>
 
-<!-- 
+<p>The dataset is available from the following Zenodo node: <a href="https://zenodo.org/records/22274685">https://zenodo.org/records/22274685</a></p>
 
+<p>More details on the dataset can be found there.</p>
 
-  <div
-    class="tags"
-    
-  >
-    
-      <a
-        href="/projects/?search=&quot;tag: datasets&quot;"
-        class="tag"
-        data-tooltip="Show items with the tag &quot;datasets&quot;"
-      >
-        datasets
-      </a>
-    
-      <a
-        href="/projects/?search=&quot;tag: tools&quot;"
-        class="tag"
-        data-tooltip="Show items with the tag &quot;tools&quot;"
-      >
-        tools
-      </a>
-    
-  </div>
+<h4 id="anonymization">Anonymization</h4>
 
- -->
+<p>The dataset contains anonymized traces of scanning traffic targeting our passive network telescope between April 2023 and April 2025.</p>
 
-<!-- <div class="search-info"></div>
- -->
+<p>The following fields have been anonymized:</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">src_ip</code>: keyed Crypto-PAn prefix-preserving anonymization, i.e. sources originally within the same network will still appear as such</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">dst_ip</code>: upper two octets have been mapped to <code class="language-plaintext highlighter-rouge">10.N.0.0/16</code> ranges, where N indicates a different /16 network of the three composing our monitored telescope. The lower two octets have been preserved.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">payload</code>: to prevent revealing our telescope’s address space through embedded or encoded references to IP addresses within payloads, only md5 hashes of the original data are included, allowing for aggregation and comparison.</li>
+</ul>
 
-<h2 id="our-projects">Our Projects</h2>
+<p>The full non-anonymized dataset is only available on request (Please <a href="mailto:d.ferrero@tudelft.nl">contact Dario Ferrero</a>)</p>
 
-<div class="card" data-style="small">
-  <a href="/projects/ddos-attack-list" aria-label="DDoS Attack List" class="card-image">
-    <img src="/images/ddos.png" alt="DDoS Attack List" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
+<h2 id="referencing-our-work">Referencing our work</h2>
 
-  <div class="card-text">
-    
-      <a href="/projects/ddos-attack-list" class="card-title">
-        DDoS Attack List
-    </a>
-    
+<p>Paper available <a href="https://dl.acm.org/doi/10.1145/3730567.3764498">here</a></p>
 
-    
-      <span class="card-subtitle">Real-time DDoS attack data</span>
-    
-
-    
-      <p>
-        A real-time list of DDoS attack victims, including attack type, target, and timestamp. Available on request.
-
-      </p>
-    
-
-    
-      
-
-
-  <div class="tags">
-    
-      <a href="/projects/?search=%22tag:%20dataset%22" class="tag" data-tooltip='Show items with the tag "dataset"'>
-        dataset
-      </a>
-    
-  </div>
-
-
-    
-  </div>
-</div>
-
-<div class="card" data-style="small">
-  <a href="/projects/raid2025-informed-scanners" aria-label="Scanning Traffic Data" class="card-image">
-    <img src="/images/reactive-telescope.png" alt="Scanning Traffic Data" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-
-  <div class="card-text">
-    
-      <a href="/projects/raid2025-informed-scanners" class="card-title">
-        Scanning Traffic Data
-    </a>
-    
-
-    
-      <span class="card-subtitle">Anonymized Reactive Telescope Packet Captures</span>
-    
-
-    
-      <p>
-        Anonymized dataset of scanning traffic targeting our Reactive Telescope
-
-      </p>
-    
-
-    
-      
-
-
-  <div class="tags">
-    
-      <a href="/projects/?search=%22tag:%20dataset%22" class="tag" data-tooltip='Show items with the tag "dataset"'>
-        dataset
-      </a>
-    
-  </div>
-
-
-    
-  </div>
-</div>
-
-<div class="card" data-style="small">
-  <a href="/projects/imc2025-syn-payloads" aria-label="TCP SYN Payloads" class="card-image">
-    <img src="/images/synpay.png" alt="TCP SYN Payloads" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-
-  <div class="card-text">
-    
-      <a href="/projects/imc2025-syn-payloads" class="card-title">
-        TCP SYN Payloads
-    </a>
-    
-
-    
-      <span class="card-subtitle">Irregular Internet Scans Data</span>
-    
-
-    
-      <p>
-        Traffic dataset of TCP SYN packets carrying a data payload, collected at our Network Telescope.
-
-      </p>
-    
-
-    
-      
-
-
-  <div class="tags">
-    
-      <a href="/projects/?search=%22tag:%20dataset%22" class="tag" data-tooltip='Show items with the tag "dataset"'>
-        dataset
-      </a>
-    
-  </div>
-
-
-    
-  </div>
-</div>
-
-<div class="card" data-style="small">
-  <a href="/projects/imc2026-udp-reactive" aria-label="UDP Reactive Telescope Data" class="card-image">
-    <img src="/images/udp-reactive.png" alt="UDP Reactive Telescope Data" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-
-  <div class="card-text">
-    
-      <a href="/projects/imc2026-udp-reactive" class="card-title">
-        UDP Reactive Telescope Data
-    </a>
-    
-
-    
-      <span class="card-subtitle">Anon. Traffic from RT-UDP</span>
-    
-
-    
-      <p>
-        Traffic dataset of UDP packets collected at our Reactive Telescope.
-
-      </p>
-    
-
-    
-      
-
-
-  <div class="tags">
-    
-      <a href="/projects/?search=%22tag:%20dataset%22" class="tag" data-tooltip='Show items with the tag "dataset"'>
-        dataset
-      </a>
-    
-  </div>
-
-
-    
-  </div>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{10.1145/3730567.3764498,
+   author = {Ferrero, Dario and Bassetti, Enrico and Griffioen, Harm and Smaragdakis, Georgios},
+   title = {Have you SYN What I See? Analyzing TCP SYN Payloads in the Wild},
+   year = {2025},
+   isbn = {9798400718601},
+   publisher = {Association for Computing Machinery},
+   address = {New York, NY, USA},
+   url = {https://doi.org/10.1145/3730567.3764498},
+   doi = {10.1145/3730567.3764498},
+   booktitle = {Proceedings of the 2025 ACM Internet Measurement Conference},
+   pages = {928–936},
+   numpages = {9},
+   keywords = {network telescope, internet scanning},
+   location = {USA},
+   series = {IMC '25}
+}
+</code></pre></div></div>
   </section>
 
 
