@@ -12,21 +12,23 @@ The dataset contains anonymized traces of scanning traffic targeting our reactiv
 
 ## Referencing our work
 
-Preprint of the paper available [here](https://gsmaragd.github.io/publications/RAID2025/RAID2025.pdf)
+Paper available [here](https://doi.org/10.1109/RAID67961.2025.00056)
 
 ```
-@inproceedings{ferrero2025revealing,
-   title = {Revealing Informed Scanners by Colocating Passive and Reactive Telescopes},
-   author = {Ferrero, Dario and Griffioen, Harm and Smaragdakis, George},
-   booktitle = {28th International Symposium on Research in Attacks, Intrusions and Defenses (RAID 2025)},
-   year = {2025},
-   location = {Gold Coast, Australia},
-   numpages = {15},
-   doi = {},
-   publisher = {Usenix Association}
-}
+@INPROCEEDINGS{11352457,
+   author={Ferrero, Dario and Smaragdakis, George and Griffioen, Harm},
+   booktitle={2025 28th International Symposium on Research in Attacks, Intrusions and Defenses (RAID)}, 
+   title={Revealing Informed Scanners by Colocating Reactive and Passive Telescopes}, 
+   year={2025},
+   volume={},
+   number={},
+   pages={713-727},
+   keywords={Sensitivity;Scalability;Intrusion detection;Telescopes;Information filters;Real-time systems;Internet;Security;Monitoring;Payloads;Network Scanning;Network Scouting;Intrusion Detection;Network Telescope;Reactive Telescope},
+   doi={10.1109/RAID67961.2025.00056}}
 ```
 
 ## Obtaining the data
 
 Please [contact Dario Ferrero](mailto:d.ferrero@tudelft.nl) to receive the data.
+
+A hosting solution for our heavier research data is currently WIP

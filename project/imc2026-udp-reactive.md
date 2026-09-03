@@ -35,4 +35,4 @@ Preprint of the paper available here: (TODO)
 
 Please [contact Dario Ferrero](mailto:d.ferrero@tudelft.nl) to receive the data.
 
-A hosting solution for our research data is currently WIP
+A hosting solution for our heavier research data is currently WIP

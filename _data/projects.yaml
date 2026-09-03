@@ -18,15 +18,15 @@
   subtitle: Irregular Internet Scans Data
   group: featured
   image: images/synpay.png
-  description: Traffic dataset of TCP SYN packets carrying a data payload, collected at our Network Telescope. Available [on request](mailto:d.ferrero@tudelft.nl).
-  # link: /projects/imc2025-syn-payloads
+  description: Traffic dataset of TCP SYN packets carrying a data payload, collected at our Network Telescope.
+  link: /projects/imc2025-syn-payloads
   tags:
     - dataset
 - title: UDP Reactive Telescope Data
   subtitle: Anon. Traffic from RT-UDP
   group: featured
   image: images/udp-reactive.png
-  description: Traffic dataset of UDP packets collected at our Reactive Telescope. Available [on request](mailto:d.ferrero@tudelft.nl).
+  description: Traffic dataset of UDP packets collected at our Reactive Telescope.
   link: /projects/imc2026-udp-reactive
   tags:
     - dataset
