@@ -533,7 +533,7 @@
 
 <h4 id="anonymization">Anonymization</h4>
 
-<p>The dataset contains anonymized traces of scanning traffic targeting our passive network telescope between April 2023 and April 2025.</p>
+<p>The dataset contains anonymized traces of scanning traffic targeting our passive network telescope between April 2023 and April 2025, stored in monthly pcapng files.</p>
 
 <p>The following fields have been anonymized:</p>
 <ul>
@@ -542,7 +542,7 @@
   <li>
 <code class="language-plaintext highlighter-rouge">dst_ip</code>: upper two octets have been mapped to <code class="language-plaintext highlighter-rouge">10.N.0.0/16</code> ranges, where N indicates a different /16 network of the three composing our monitored telescope. The lower two octets have been preserved.</li>
   <li>
-<code class="language-plaintext highlighter-rouge">payload</code>: to prevent revealing our telescope’s address space through embedded or encoded references to IP addresses within payloads, only md5 hashes of the original data are included, allowing for aggregation and comparison.</li>
+<code class="language-plaintext highlighter-rouge">payload</code>: only md5 hashes of the original data are included, allowing for aggregation across traffic.</li>
 </ul>
 
 <p>The full non-anonymized dataset is only available on request (Please <a href="mailto:d.ferrero@tudelft.nl">contact Dario Ferrero</a>)</p>
