@@ -17,12 +17,12 @@ More details on the dataset can be found there.
 
 #### Anonymization
 
-The dataset contains anonymized traces of scanning traffic targeting our passive network telescope between April 2023 and April 2025.
+The dataset contains anonymized traces of scanning traffic targeting our passive network telescope between April 2023 and April 2025, stored in monthly pcapng files.
 
 The following fields have been anonymized:
 - `src_ip`: keyed Crypto-PAn prefix-preserving anonymization, i.e. sources originally within the same network will still appear as such
 - `dst_ip`: upper two octets have been mapped to `10.N.0.0/16` ranges, where N indicates a different /16 network of the three composing our monitored telescope. The lower two octets have been preserved.
-- `payload`: to prevent revealing our telescope's address space through embedded or encoded references to IP addresses within payloads, only md5 hashes of the original data are included, allowing for aggregation and comparison.
+- `payload`: only md5 hashes of the original data are included, allowing for aggregation across traffic.
 
 The full non-anonymized dataset is only available on request (Please [contact Dario Ferrero](mailto:d.ferrero@tudelft.nl))
 
