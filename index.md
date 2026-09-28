@@ -1,8 +1,6 @@
 ---
 ---
 
-{% include research.html %}
-
 ## Highlights
 
 {% capture text %}

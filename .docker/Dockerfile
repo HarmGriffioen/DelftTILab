@@ -1,25 +1,28 @@
 # start with official ruby docker image as base
-FROM ruby:3.1.2
+FROM ruby:3.3-slim-bookworm
+
+# install build dependencies
+# (libcurl4: loaded at runtime by html-proofer, via typhoeus/ethon)
+RUN apt update && apt install -y build-essential python3 python3-pip gcc g++ make libcurl4 && rm -rf /var/lib/apt/lists/*
+
+# install ruby packages outside the app folder, so the repo's Gemfile.lock
+# (mounted over /usr/src/app at runtime) can't pin gems the image doesn't have
+WORKDIR /usr/src/deps
+COPY Gemfile ./
+RUN gem install bundler && bundle install
+ENV BUNDLE_GEMFILE=/usr/src/deps/Gemfile
 
 # set working directory within container
 WORKDIR /usr/src/app
 
-# pull in ruby (jekyll) and python (cite process) package info
-COPY Gemfile Gemfile.lock _cite/requirements.txt ./
-
-# install ruby packages
-RUN VERSION=$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xargs); \
-    gem install bundler --version ${VERSION} && \
-    bundle _${VERSION}_ install
-
-# install python
-RUN apt update && apt install -y python3 python3-pip
+# pull in python (cite process) package info
+COPY _cite/requirements.txt ./
 
 # install python packages
-RUN python3 -m pip install --no-cache-dir --upgrade --requirement requirements.txt
+RUN python3 -m pip install --no-cache-dir --upgrade --break-system-packages --requirement requirements.txt
 
 # install python package for listening for file changes
-RUN pip install "watchdog[watchmedo]==3.0.0"
+RUN pip install --break-system-packages "watchdog[watchmedo]==3.0.0"
 
 # ports used by jekyll
 EXPOSE 4000

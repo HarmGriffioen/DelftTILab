@@ -1,23 +1,80 @@
 ---
 ---
 
+$page: 1000px;
+
+// a Delft-blue band that mirrors the header
 footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  gap: 20px;
-  padding: 40px;
-  line-height: var(--spacing);
-  box-shadow: var(--shadow);
+  gap: var(--space-6);
+  padding: var(--space-12) max(var(--space-6), calc((100% - #{$page}) / 2));
+  background: var(--header-bg);
+  color: var(--header-muted);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+
+  // the EWI mark in header colours; the red wall stays red
+  --logo-row-dark: var(--header-ink);
+  --logo-row-light: var(--header-logo-row);
+  --logo-edge-left: var(--header-muted);
+  --logo-edge-right: var(--header-muted);
+  --signal: var(--header-signal);
 }
 
-footer a {
-  color: var(--text) !important;
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
 }
 
+footer a,
 footer a:hover {
-  color: var(--primary) !important;
+  color: var(--header-ink);
+}
+
+footer a:focus-visible {
+  outline: var(--border-rule) solid var(--header-ink);
+  outline-offset: 3px;
+}
+
+footer .home {
+  text-decoration: none;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+  font-size: 15px;
+  font-weight: var(--medium);
+}
+
+.footer-nav a {
+  color: var(--header-muted);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--header-ink);
+  text-decoration: underline;
+}
+
+.footer-links .button[data-style="bare"] {
+  color: var(--header-ink);
+}
+
+.footer-links .button[data-style="bare"]:hover {
+  background: var(--header-cell);
+  color: var(--header-ink);
+}
+
+.footer-legal {
+  padding-top: var(--space-6);
+  border-top: var(--border-hair) solid var(--header-cell);
 }
 
 footer .icon {

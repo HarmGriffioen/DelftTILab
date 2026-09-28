@@ -1,0 +1,73 @@
+{% comment %}
+  The design system's Motif: an address-space grid in 16px cells with a
+  worm hopping between four infected cells (dashed arcs, boxes on the cells).
+  Deterministic for a given seed, so each paper keeps its own pattern.
+  Usage: {% include motif.html seed=123 %}
+{% endcomment %}
+{%- assign seed = include.seed | default: 7 | plus: 0 -%}
+{%- assign cols = 15 -%}
+{%- assign rows = 10 -%}
+
+{%- comment -%} worm hops, spread along the long side {%- endcomment -%}
+{%- assign hopcols = "2,6,9,13" | split: "," -%}
+{%- assign hops = "" -%}
+{%- for hc in hopcols -%}
+  {%- assign j = forloop.index0 -%}
+  {%- assign jitter = j | times: 2 | plus: seed | modulo: 3 -%}
+  {%- assign hy = rows | minus: 3 | minus: jitter -%}
+  {%- capture hops -%}{{ hops }}|{{ hc }},{{ hy }}|{%- endcapture -%}
+{%- endfor -%}
+
+<svg
+  class="motif"
+  viewBox="0 0 240 160"
+  preserveAspectRatio="xMidYMid slice"
+  aria-hidden="true"
+>
+  {%- for y in (0..9) -%}
+    {%- for x in (0..14) -%}
+      {%- capture key -%}|{{ x }},{{ y }}|{%- endcapture -%}
+      {%- assign h = x | times: 7919 -%}
+      {%- assign hy = y | times: 104729 -%}
+      {%- assign hs = seed | times: 1299709 -%}
+      {%- assign h = h | plus: hy | plus: hs -%}
+      {%- assign h = h | times: h | plus: 12345 | modulo: 1000003 -%}
+      {%- assign n = h | modulo: 100 -%}
+      {%- assign band = x | divided_by: 4 | modulo: 5 -%}
+      {%- assign cls = "" -%}
+      {%- if hops contains key -%}
+        {%- assign cls = "signal" -%}
+      {%- elsif n > 84 -%}
+        {%- assign cls = "accent" -%}
+      {%- elsif band == 2 and n > 50 -%}
+        {%- assign cls = "accent" -%}
+      {%- elsif n > 45 -%}
+        {%- assign cls = "soft" -%}
+      {%- endif -%}
+      {%- if cls != "" -%}
+        <rect class="motif-{{ cls }}" x="{{ x | times: 16 | plus: 2 }}" y="{{ y | times: 16 | plus: 2 }}" width="12" height="12"/>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+
+  {%- assign hoplist = hops | remove_first: "|" | split: "||" -%}
+  {%- for hop in hoplist -%}
+    {%- assign xy = hop | remove: "|" | split: "," -%}
+    {%- assign bx = xy[0] | times: 16 -%}
+    {%- assign by = xy[1] | times: 16 -%}
+    <rect class="motif-box" x="{{ bx | minus: 1 }}" y="{{ by | minus: 1 }}" width="18" height="18"/>
+    {%- if forloop.first == false -%}
+      {%- assign sx = ax | plus: 8 -%}
+      {%- assign sy = ay | minus: 1 -%}
+      {%- assign ex = bx | plus: 8 -%}
+      {%- assign ey = by | minus: 1 -%}
+      {%- assign dx = ex | minus: sx -%}
+      {%- assign bulge = dx | times: 45 | divided_by: 100 -%}
+      {%- assign cx = sx | plus: ex | divided_by: 2 -%}
+      {%- assign cy = sy | plus: ey | divided_by: 2 | minus: bulge | at_least: 4 -%}
+      <path class="motif-arc" d="M{{ sx }} {{ sy }} Q{{ cx }} {{ cy }} {{ ex }} {{ ey }}"/>
+    {%- endif -%}
+    {%- assign ax = bx -%}
+    {%- assign ay = by -%}
+  {%- endfor -%}
+</svg>

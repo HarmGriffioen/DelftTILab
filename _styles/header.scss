@@ -1,81 +1,102 @@
 ---
 ---
 
-$logo-big: 80px;
 $logo: 40px;
-$big-padding: 100px;
-$collapse: 700px;
-$sticky: true;
+$collapse: 800px;
+$page: 1000px; // matches the content column in section.scss
 
 header {
+  display: flex;
+  flex-direction: column;
+  background: var(--header-bg);
+  color: var(--header-ink);
+  overflow: hidden;
+
+  // the EWI mark switches to the header colours; the red wall stays red
+  --logo-row-dark: var(--header-ink);
+  --logo-row-light: var(--header-logo-row);
+  --logo-edge-left: var(--header-muted);
+  --logo-edge-right: var(--header-muted);
+  --signal: var(--header-signal);
+}
+
+header a {
+  color: var(--header-ink);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--header-ink);
+}
+
+header a:focus-visible,
+.nav-toggle:focus-visible {
+  outline: var(--border-rule) solid var(--header-ink);
+  outline-offset: 3px;
+}
+
+.header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  box-shadow: var(--shadow);
-
-  @if $sticky {
-    position: sticky !important;
-    top: 0;
-    z-index: 10 !important;
-  }
-}
-
-header a {
-  color: var(--text);
-  text-decoration: none;
+  gap: var(--space-6);
+  padding: var(--space-4) max(var(--space-6), calc((100% - #{$page}) / 2));
+  border-bottom: var(--border-hair) solid var(--header-cell);
 }
 
 .home {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
+  gap: var(--space-3);
+  min-width: 0;
 }
 
 .logo {
+  display: flex;
   height: $logo;
+  flex-shrink: 0;
 }
 
 .logo > * {
-  width: unset;
+  width: auto;
   height: 100%;
 }
 
 .title-text {
   display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 5px;
+  flex-direction: column;
   min-width: 0;
-  font-family: var(--title);
   text-align: left;
 }
 
 .title {
-  font-size: var(--large);
+  font-family: var(--title);
+  font-weight: var(--heavy);
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  word-spacing: 0.06em;
 }
 
 .subtitle {
-  opacity: 0.65;
-  font-weight: var(--thin);
+  margin-top: 2px;
+  color: var(--header-muted);
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: var(--semi-bold);
 }
 
 .nav-toggle {
   display: none;
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin: 0;
-  color: var(--text);
+  color: var(--header-ink);
   appearance: none;
-  transition: background var(--transition);
+  cursor: pointer;
 }
 
 .nav-toggle:after {
@@ -83,8 +104,8 @@ header a {
   position: absolute;
   left: 50%;
   top: 50%;
-  color: var(--text);
-  font-size: 15px;
+  color: var(--header-ink);
+  font-size: 18px;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   transform: translate(-50%, -50%);
@@ -94,75 +115,256 @@ header a {
   content: "\f00d";
 }
 
-nav {
+header nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--space-2) 28px;
   font-family: var(--heading);
-  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: var(--medium);
 }
 
-nav > a {
-  padding: 5px;
+header nav > a {
+  padding: var(--space-1) 0;
+  border-bottom: var(--border-rule) solid transparent;
+  color: var(--header-muted);
+  transition: color var(--transition), border-color var(--transition);
 }
 
-nav > a:hover {
-  color: var(--primary);
+header nav > a:hover,
+header nav > a[aria-current] {
+  color: var(--header-ink);
+  border-bottom-color: var(--header-ink);
 }
 
-header:not([data-big]) {
-  @media (max-width: $collapse) {
-    justify-content: flex-end;
+// order in the bar: wordmark, nav, dark toggle (nav toggle on mobile)
+.header-bar .home { order: 0; margin-right: auto; }
+.header-bar nav { order: 1; }
+.header-bar .dark-toggle { order: 2; }
+.header-bar .nav-toggle { order: 3; }
 
-    .nav-toggle {
-      display: flex;
-    }
+header .dark-toggle {
+  flex-shrink: 0;
+  border-color: var(--header-muted);
+  background: transparent;
+}
 
-    .nav-toggle:not(:checked) + nav {
-      display: none;
-    }
+header .dark-toggle:after {
+  color: var(--header-ink);
+}
 
-    nav {
-      align-items: flex-end;
-      flex-direction: column;
-      width: 100%;
-    }
+header .dark-toggle:focus-visible {
+  outline-color: var(--header-ink);
+}
+
+@media (max-width: $collapse) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .header-bar nav {
+    order: 4;
+  }
+
+  .nav-toggle:not(:checked) + nav {
+    display: none;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
 }
 
-header[data-big] {
-  justify-content: center;
-  align-items: center;
+// home page hero
+.header-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-12) max(var(--space-6), calc((100% - #{$page}) / 2)) 0;
+  text-align: left;
+}
+
+.header-copy {
+  display: flex;
   flex-direction: column;
-  padding: $big-padding 20px;
+  gap: var(--space-4);
+  max-width: 760px;
+}
 
-  @if $sticky {
-    top: unset;
+.header-title {
+  margin: 0;
+  color: var(--header-ink);
+  font-family: var(--title);
+  font-weight: var(--heavy);
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  word-spacing: 0.06em;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.header-intro {
+  max-width: 560px;
+  margin: 0;
+  color: var(--header-muted);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.header-button {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 var(--space-4);
+  border: var(--border-hair) solid var(--header-muted);
+  color: var(--header-ink);
+  font-size: 15px;
+  font-weight: var(--semi-bold);
+  transition: background var(--transition);
+}
+
+.header-button:hover {
+  background: var(--header-cell);
+}
+
+.header-button-primary,
+.header-button-primary:hover {
+  border-color: var(--header-ink);
+  background: var(--header-ink);
+  color: var(--header-bg);
+}
+
+.header-button-primary:hover {
+  filter: brightness(0.94);
+}
+
+// skyline band
+.skyline {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+header:not([data-big]) .skyline {
+  max-width: 720px;
+  margin: calc(var(--space-6) * -1) 0 0 auto;
+}
+
+.skyline-cell { fill: var(--header-cell); }
+.skyline-glass { fill: var(--accent-soft); opacity: 0.55; }
+.skyline-red { fill: var(--landmark-red); }
+.skyline-lit,
+.skyline-win { fill: var(--header-ink); }
+.skyline-inf { fill: var(--header-signal); }
+
+.skyline-worm path,
+.skyline-worm rect {
+  fill: none;
+  stroke: var(--header-signal);
+  stroke-width: 2;
+}
+
+.skyline-worm path {
+  stroke-dasharray: 6 5;
+}
+
+// mask paths that reveal each arc as it is drawn
+.skyline-draw {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 8;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+// static picture (no animation, or reduced motion): route a infected,
+// route b clean, one lit window in the tower
+.skyline-win { opacity: 0; }
+.skyline-w0 { opacity: 1; }
+
+@each $hop in b0, b1, b2, b3 {
+  .skyline-inf.skyline-#{$hop},
+  .skyline-box.skyline-#{$hop} {
+    opacity: 0;
   }
 
-  .home {
-    flex-direction: column;
-    flex-grow: 0;
+  .skyline-draw.skyline-#{$hop} {
+    stroke-dashoffset: 1;
+  }
+}
+
+// the worm: two routes take turns in one cycle. each hop draws its arc,
+// lights up the next building, and is cleaned up again ~11s later.
+$cycle: 48s;
+$step: $cycle * 0.08; // time between hops
+$routes: (a: 0s, b: $cycle * 0.5);
+
+@keyframes skyline-infect {
+  0% { opacity: 0; }
+  1%, 22% { opacity: 1; }
+  24%, 100% { opacity: 0; }
+}
+
+@keyframes skyline-draw {
+  0% { stroke-dashoffset: 1; opacity: 1; }
+  6% { stroke-dashoffset: 0; }
+  22% { stroke-dashoffset: 0; opacity: 1; }
+  24%, 100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+// tower windows: on for a while, then off again
+@keyframes skyline-window {
+  0%, 55% { opacity: 0; }
+  57%, 85% { opacity: 1; }
+  87%, 100% { opacity: 0; }
+}
+
+// the one window that is usually lit, switching off now and then
+@keyframes skyline-window-off {
+  0%, 70% { opacity: 1; }
+  72%, 90% { opacity: 0; }
+  92%, 100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @each $route, $offset in $routes {
+    @for $i from 0 through 3 {
+      .skyline-inf.skyline-#{$route}#{$i},
+      .skyline-box.skyline-#{$route}#{$i} {
+        animation: skyline-infect $cycle linear infinite backwards;
+        animation-delay: $offset + $step * $i;
+      }
+    }
+
+    @for $i from 1 through 3 {
+      .skyline-draw.skyline-#{$route}#{$i} {
+        // start drawing so the arc lands as the next building lights up
+        animation: skyline-draw $cycle ease-in-out infinite backwards;
+        animation-delay: $offset + $step * $i - $cycle * 0.06;
+      }
+    }
   }
 
-  .logo {
-    height: $logo-big;
-    flex-shrink: 0;
-  }
-
-  .title-text {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .title {
-    font-size: var(--xxl);
-  }
-
-  .subtitle {
-    font-size: var(--large);
-  }
+  // unrelated periods so the tower never blinks in step
+  .skyline-w0 { animation: skyline-window-off 41s linear infinite; animation-delay: -9s; }
+  .skyline-w1 { animation: skyline-window 19s linear infinite; animation-delay: -3s; }
+  .skyline-w2 { animation: skyline-window 23s linear infinite; animation-delay: -11s; }
+  .skyline-w3 { animation: skyline-window 29s linear infinite; animation-delay: -7s; }
+  .skyline-w4 { animation: skyline-window 31s linear infinite; animation-delay: -19s; }
+  .skyline-w5 { animation: skyline-window 37s linear infinite; animation-delay: -2s; }
 }

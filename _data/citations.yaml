@@ -14,6 +14,10 @@
   dario-ferrero: true
   plugin: sources.py
   file: sources.yaml
+  image: images/synpay.png
+  buttons:
+  - type: data
+    link: /projects/imc2025-syn-payloads
 - id: doi:10.1145/3730567.3764481
   title: 'Decoy Databases: Analyzing Attacks on Public Facing Databases'
   authors:
@@ -23,6 +27,7 @@
   publisher: Proceedings of the 2025 ACM Internet Measurement Conference
   date: '2025-10-28'
   link: https://doi.org/hbcc5m
+  image: images/papers/decoy-databases.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1145/3646547.3688409
@@ -35,6 +40,7 @@
   publisher: Proceedings of the 2024 ACM on Internet Measurement Conference
   date: '2024-11-04'
   link: https://doi.org/g9m957
+  image: images/papers/syn-ten-years.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1145/3372297.3417277
@@ -46,6 +52,7 @@
     Security
   date: '2020-10-30'
   link: https://doi.org/ghm9hf
+  image: images/papers/mirai-battle.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/978-3-030-57878-7_14
@@ -57,6 +64,7 @@
   publisher: Lecture Notes in Computer Science
   date: '2020-01-01'
   link: https://doi.org/gn7t2x
+  image: images/papers/cti-feeds.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1145/3407023.3407051
@@ -68,6 +76,7 @@
     and Security
   date: '2020-08-25'
   link: https://doi.org/gn7t2t
+  image: images/papers/as-churn.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.23919/IFIPNetworking52078.2021.9472857
@@ -80,6 +89,7 @@
   publisher: 2021 IFIP Networking Conference (IFIP Networking)
   date: '2021-06-21'
   link: https://doi.org/gptxb5
+  image: images/papers/sip-bruteforce.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1145/3460120.3484747
@@ -93,6 +103,7 @@
     Security
   date: '2021-11-12'
   link: https://doi.org/gnnc6c
+  image: images/papers/scan-test-execute.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1145/3433210.3437520
@@ -105,6 +116,7 @@
     Security
   date: '2021-05-24'
   link: https://doi.org/g9m965
+  image: images/papers/pony-bitcoin.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.4233/uuid:37f7367f-bc5e-4cde-a7fd-47d12621f853
@@ -114,6 +126,7 @@
   publisher: Delft University of Technology
   date: '2022-01-01'
   link: https://doi.org/g9m969
+  image: images/papers/thesis-cti.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1145/3618257.3624831
@@ -129,6 +142,7 @@
   publisher: Proceedings of the 2023 ACM on Internet Measurement Conference
   date: '2023-10-24'
   link: https://doi.org/g9m97k
+  image: images/papers/meta-telescope.svg
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1109/SP46215.2023.10179467
@@ -140,5 +154,155 @@
   publisher: 2023 IEEE Symposium on Security and Privacy (SP)
   date: '2023-05-01'
   link: https://doi.org/g9m98r
+  image: images/tarpit.png
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/RAID67961.2025.00056
+  title: Revealing Informed Scanners by Colocating Reactive and Passive Telescopes
+  authors:
+  - Dario Ferrero
+  - George Smaragdakis
+  - Harm Griffioen
+  publisher: 2025 28th International Symposium on Research in Attacks, Intrusions
+    and Defenses (RAID)
+  date: '2025-10-19'
+  link: https://doi.org/hckrm8
+  image: images/reactive-telescope.png
+  buttons:
+  - type: data
+    link: /projects/raid2025-informed-scanners
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/NOMS47738.2020.9110444
+  title: 'Discovering Collaboration: Unveiling Slow, Distributed Scanners based on
+    Common Header Field Patterns'
+  authors:
+  - Harm Griffioen
+  - Christian Doerr
+  publisher: NOMS 2020 - 2020 IEEE/IFIP Network Operations and Management Symposium
+  date: '2020-04-01'
+  link: https://doi.org/gn7t2v
+  image: images/papers/discovering-collaboration.svg
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/NTMS.2019.8763820
+  title: Taxonomy and Adversarial Strategies of Random Subdomain Attacks
+  authors:
+  - Harm Griffioen
+  - Christian Doerr
+  publisher: 2019 10th IFIP International Conference on New Technologies, Mobility
+    and Security (NTMS)
+  date: '2019-06-01'
+  link: https://doi.org/gn7t2w
+  image: images/papers/random-subdomain.svg
+  plugin: sources.py
+  file: sources.yaml
+- id: arxiv:2606.27966
+  title: 'Decoys Cannot Go Everywhere: Mapping the Deception Surface in MITRE ATT&CK'
+  authors:
+  - Veronica Valeros
+  - Carlos Catania
+  - "Viliam Lis\xFD"
+  - Harm Griffioen
+  publisher: arXiv
+  date: '2026-06-29'
+  link: https://arxiv.org/abs/2606.27966
+  image: images/papers/decoys-attack.svg
+  plugin: sources.py
+  file: sources.yaml
+- title: 'Understanding Different Perspectives: Analyzing UDP Scanning Through Reactive
+    Telescopes'
+  authors:
+  - Dario Ferrero
+  - A. Sordello
+  - Harm Griffioen
+  - Idilio Drago
+  - Georgios Smaragdakis
+  - Marco Mellia
+  publisher: Proceedings of the 2026 ACM Internet Measurement Conference (IMC '26)
+  date: '2026-01-01'
+  image: images/udp-reactive.png
+  buttons:
+  - type: data
+    link: /projects/imc2026-udp-reactive
+  plugin: sources.py
+  file: sources.yaml
+- title: 'From Mirai to Gorilla: Deep Dive into a Long-Lasting DDoS-for-Hire Botnet'
+  authors:
+  - Maarten Weyns
+  - Dario Ferrero
+  - S.O. de Beek
+  - Daniel Wagner
+  - Georgios Smaragdakis
+  - Harm Griffioen
+  publisher: 35th USENIX Security Symposium (USENIX Security '26)
+  date: '2026-01-01'
+  image: images/papers/mirai-to-gorilla.svg
+  plugin: sources.py
+  file: sources.yaml
+- title: 'MoZombie: A Case Study of the Self-Sustaining Mozi Botnet Architecture'
+  authors:
+  - M. Mohammed
+  - Georgios Smaragdakis
+  - Harm Griffioen
+  publisher: 28th International Symposium on Research in Attacks, Intrusions and Defenses
+    (RAID)
+  date: '2025-01-01'
+  image: images/papers/mozombie.svg
+  plugin: sources.py
+  file: sources.yaml
+- title: 'Trust but Verify: An Assessment of Vulnerability Tagging Services'
+  authors:
+  - S.C. Huang
+  - Harm Griffioen
+  - M. van der Horst
+  - Georgios Smaragdakis
+  - Michel van Eeten
+  publisher: 34th USENIX Security Symposium (USENIX Security 25)
+  date: '2025-01-01'
+  image: images/papers/trust-verify.svg
+  plugin: sources.py
+  file: sources.yaml
+- title: 'Quantifying TCP SYN DDoS Resilience: A Longitudinal Study of Internet Services'
+  authors:
+  - Harm Griffioen
+  - Christian Doerr
+  publisher: 2020 IFIP Networking Conference (Networking)
+  date: '2020-06-01'
+  image: images/papers/syn-resilience.svg
+  plugin: sources.py
+  file: sources.yaml
+- title: A Different Cup of TI? The Added Value of Commercial Threat Intelligence
+  authors:
+  - Xander Bouwman
+  - Harm Griffioen
+  - J. Egbers
+  - Christian Doerr
+  - Bram Klievink
+  - Michel van Eeten
+  publisher: 29th USENIX Security Symposium (USENIX Security '20)
+  date: '2020-08-12'
+  image: images/papers/cup-of-ti.svg
+  link: https://www.usenix.org/conference/usenixsecurity20/presentation/bouwman
+  plugin: sources.py
+  file: sources.yaml
+- title: Fingerprinting Tooling used for SSH Compromisation Attempts
+  authors:
+  - Vincent Ghiette
+  - Harm Griffioen
+  - Christian Doerr
+  publisher: 22nd International Symposium on Research in Attacks, Intrusions and Defenses
+    (RAID 2019)
+  date: '2019-09-23'
+  image: images/papers/ssh-fingerprint.svg
+  link: https://www.usenix.org/conference/raid2019/presentation/ghiette
+  plugin: sources.py
+  file: sources.yaml
+- title: 'Scanners: Discovery of Distributed Slow Scanners in Telescope Data'
+  authors:
+  - Harm J. Griffioen
+  publisher: Master's thesis, Delft University of Technology
+  date: '2018-01-01'
+  image: images/papers/thesis-scanners.svg
   plugin: sources.py
   file: sources.yaml

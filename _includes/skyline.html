@@ -1,0 +1,95 @@
+{% comment %}
+  Delft skyline in grid cells (old town, Nieuwe Kerk, Oude Kerk, a mill,
+  the campus and the EWI high-rise), with a worm spreading between
+  buildings. From the design system's Skyline component.
+  viewBox 1280x240; the band is the bottom 160 (16px pitch, 13px cells).
+
+  Animated in pure CSS (see _styles/header.scss): two infection routes take
+  turns, each hop drawing its arc before the next building lights up, and
+  infected buildings get cleaned up again. Windows in the EWI tower switch
+  on and off. With reduced motion, route a is shown as a static picture.
+{% endcomment %}
+{%- assign heights = "2,1,1,2,1,1,2,2,3,3,2,1,3,5,7,10,7,5,3,1,1,2,1,1,2,1,4,6,6,6,4,1,1,2,1,1,2,1,1,2,3,5,5,3,1,2,1,1,2,1,3,3,3,3,3,3,3,10,10,10,10,10,10,10,3,3,3,3,3,3,3,3,3,1,1,2,1,1,2,1" | split: "," -%}
+{%- assign sails = "|39,5|44,5|39,8|44,8|" -%}
+
+{%- comment -%}
+  infected cells per hop: route a (house, Oude Kerk, mill, campus) and
+  route b (campus, old town, old town, Nieuwe Kerk)
+{%- endcomment -%}
+{%- assign hops = "a0=8,8;a1=27,5 28,7 29,6;a2=41,6 42,7;a3=52,8 53,7 54,8 55,7;b0=50,7 51,8;b1=36,8 37,9;b2=21,8 22,9;b3=17,5 18,7" | split: ";" -%}
+
+{%- comment -%} boxes around the first cell of each hop, then the arcs between hops {%- endcomment -%}
+{%- assign boxes = "a0=125,205;a1=429,157;a2=653,173;a3=845,189;b0=797,189;b1=573,205;b2=333,205;b3=269,157" | split: ";" -%}
+{%- assign arcs = "a1=M134.5 205 Q286 50 438.5 157;a2=M438.5 157 Q550 50 662.5 173;a3=M662.5 173 Q758 60 854.5 189;b1=M806.5 189 Q694.5 60 582.5 205;b2=M582.5 205 Q462.5 40 342.5 205;b3=M342.5 205 Q310.5 110 278.5 157" | split: ";" -%}
+
+{%- comment -%} EWI tower windows that switch on and off {%- endcomment -%}
+{%- assign windows = "w0=60,4;w1=58,1;w2=61,3;w3=57,6;w4=62,7;w5=59,8" | split: ";" -%}
+
+<svg
+  class="skyline"
+  viewBox="0 0 1280 240"
+  preserveAspectRatio="xMidYMax meet"
+  role="img"
+  aria-label="Delft skyline drawn in grid cells, with a worm spreading between buildings"
+>
+  {%- for r in (0..9) -%}
+    {%- for c in (0..79) -%}
+      {%- assign height = heights[c] | plus: 0 -%}
+      {%- assign floor = 10 | minus: height -%}
+      {%- capture key -%}|{{ c }},{{ r }}|{%- endcapture -%}
+      {%- assign cls = "" -%}
+      {%- if r >= floor or sails contains key -%}
+        {%- assign even = r | modulo: 2 -%}
+        {%- if c >= 57 and c <= 62 and even == 0 -%}
+          {%- assign cls = "glass" -%}
+        {%- else -%}
+          {%- assign cls = "cell" -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- if c == 63 -%}
+        {%- if r == 1 -%}{%- assign cls = "lit" -%}{%- else -%}{%- assign cls = "red" -%}{%- endif -%}
+      {%- endif -%}
+      {%- if cls != "" -%}
+        <rect class="skyline-{{ cls }}" x="{{ c | times: 16 }}" y="{{ r | times: 16 | plus: 80 }}" width="13" height="13"/>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+
+  {%- for window in windows -%}
+    {%- assign parts = window | split: "=" -%}
+    {%- assign xy = parts[1] | split: "," -%}
+    <rect class="skyline-win skyline-{{ parts[0] }}" x="{{ xy[0] | times: 16 }}" y="{{ xy[1] | times: 16 | plus: 80 }}" width="13" height="13"/>
+  {%- endfor -%}
+
+  {%- if include.worm != false -%}
+    {%- for hop in hops -%}
+      {%- assign parts = hop | split: "=" -%}
+      {%- assign cells = parts[1] | split: " " -%}
+      {%- for cell in cells -%}
+        {%- assign xy = cell | split: "," -%}
+        <rect class="skyline-inf skyline-{{ parts[0] }}" x="{{ xy[0] | times: 16 }}" y="{{ xy[1] | times: 16 | plus: 80 }}" width="13" height="13"/>
+      {%- endfor -%}
+    {%- endfor -%}
+
+    <defs>
+      {%- for arc in arcs -%}
+        {%- assign parts = arc | split: "=" -%}
+        <mask id="skyline-mask-{{ parts[0] }}" maskUnits="userSpaceOnUse" x="0" y="0" width="1280" height="240">
+          <path class="skyline-draw skyline-{{ parts[0] }}" d="{{ parts[1] }}" pathLength="1"/>
+        </mask>
+      {%- endfor -%}
+    </defs>
+
+    <g class="skyline-worm">
+      {%- for arc in arcs -%}
+        {%- assign parts = arc | split: "=" -%}
+        <path d="{{ parts[1] }}" mask="url(#skyline-mask-{{ parts[0] }})"/>
+      {%- endfor -%}
+      {%- for box in boxes -%}
+        {%- assign parts = box | split: "=" -%}
+        {%- assign xy = parts[1] | split: "," -%}
+        <rect class="skyline-box skyline-{{ parts[0] }}" x="{{ xy[0] }}" y="{{ xy[1] }}" width="19" height="19"/>
+      {%- endfor -%}
+    </g>
+  {%- endif %}
+</svg>

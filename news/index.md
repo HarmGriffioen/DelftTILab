@@ -1,5 +1,5 @@
 ---
-title: news
+title: News
 nav:
   order: 0
   tooltip: What is happening in DTIL

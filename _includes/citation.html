@@ -18,12 +18,21 @@
         class="citation-image"
         aria-label="{{ citation.title | default: "citation link" | regex_strip }}"
       >
-        <img
-          src="{{ citation.image | relative_url | uri_escape }}"
-          alt="{{ citation.title | default: "citation image" | regex_strip }}"
-          loading="lazy"
-          {% include fallback.html %}
-        >
+        {% assign ext = citation.image | split: "." | last %}
+        {% if citation.image and ext == "svg" %}
+          {{ citation.image | file_read }}
+        {% elsif citation.image %}
+          <img
+            src="{{ citation.image | relative_url | uri_escape }}"
+            alt="{{ citation.title | default: "citation image" | regex_strip }}"
+            loading="lazy"
+            {% include fallback.html %}
+          >
+        {% else %}
+          {% assign day = citation.date | date: "%j" | plus: 0 %}
+          {% assign seed = citation.title | size | times: 7 | plus: day %}
+          {% include motif.html seed=seed %}
+        {% endif %}
       </a>
     {% endif %}
 
@@ -62,12 +71,10 @@
       <div class="citation-details">
         <span class="citation-publisher">
           {{- citation.publisher | default: "[no publisher info]" -}}
-        </span>
-        &nbsp;·&nbsp;
+        </span>,
         <span class="citation-date">
           {{- citation.date | default: "[no date info]" | date: "%d %b %Y" -}}
-        </span>
-        &nbsp;·&nbsp;
+        </span>,
         <span class="citation-id">
           {{- citation.id | default: "[no id info]" -}}
         </span>

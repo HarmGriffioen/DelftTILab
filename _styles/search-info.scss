@@ -2,8 +2,13 @@
 ---
 
 .search-info {
-  margin: 20px 0;
-  text-align: center;
-  font-style: italic;
+  margin: var(--space-4) 0;
+  color: var(--ink-muted);
+  font-size: 14px;
+  text-align: left;
   line-height: var(--spacing);
+}
+
+.search-info:empty {
+  display: none;
 }

@@ -7,7 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Meet the Team
 
-Great research starts with great people. Here you’ll find all current and former members of our team, each bringing their own expertise, creativity, and passion to the <span style="color:#00A6D6;"><b>Delft Threat Intelligence Lab</b></span>.
+Great research starts with great people. Here you’ll find all current and former members of our team, each bringing their own expertise, creativity, and passion to the **Delft Threat Intelligence Lab**.
 
 {% include section.html %}
 

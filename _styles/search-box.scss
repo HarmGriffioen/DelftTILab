@@ -4,12 +4,29 @@
 .search-box {
   position: relative;
   height: 40px;
+  margin: var(--space-6) 0;
 }
 
 .search-box .search-input {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding-right: 40px;
+  padding: 0 40px 0 var(--space-4);
+  border: var(--border-hair) solid var(--line-strong);
+  border-radius: var(--rounded);
+  background: var(--surface-raised);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+}
+
+.search-box .search-input::placeholder {
+  color: var(--ink-muted);
+}
+
+.search-box .search-input:focus-visible {
+  outline: var(--border-rule) solid var(--focus);
+  outline-offset: 2px;
 }
 
 .search-box button {
@@ -21,6 +38,6 @@
   padding: 0;
   aspect-ratio: 1 / 1;
   background: none;
-  color: var(--black);
+  color: var(--ink-muted);
   border: none;
 }

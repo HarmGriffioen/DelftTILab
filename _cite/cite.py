@@ -21,6 +21,23 @@ warnings = []
 output_file = "_data/citations.yaml"
 
 
+def fix_mojibake(value):
+    """
+    repair text that was UTF-8 but got decoded as Latin-1 somewhere upstream
+    (e.g. Manubot's arXiv lookup turns "Lisý" into "LisÃ½")
+    """
+    if isinstance(value, str):
+        try:
+            return value.encode("latin-1").decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            return value
+    if isinstance(value, list):
+        return [fix_mojibake(item) for item in value]
+    if isinstance(value, dict):
+        return {key: fix_mojibake(item) for key, item in value.items()}
+    return value
+
+
 log()
 
 log("Compiling sources")
@@ -141,7 +158,7 @@ for index, source in enumerate(sources):
 
         try:
             # run Manubot and set citation
-            citation = cite_with_manubot(_id)
+            citation = fix_mojibake(cite_with_manubot(_id))
 
         # if Manubot cannot cite source
         except Exception as e:
