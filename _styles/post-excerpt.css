@@ -4,9 +4,9 @@
 
 .post-excerpt {
   display: flex;
-  margin: 20px 0;
+  margin: var(--space-6) 0;
   border-radius: var(--rounded);
-  background: var(--background);
+  background: var(--surface-raised);
   overflow: hidden;
   box-shadow: var(--shadow);
 }
@@ -39,7 +39,16 @@
 
 .post-excerpt-text > a:first-child {
   width: 100%;
-  font-weight: var(--semi-bold);
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: var(--bold);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.post-excerpt-text > a:first-child:hover {
+  color: var(--accent);
 }
 
 .post-excerpt-text > div {

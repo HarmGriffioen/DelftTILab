@@ -45,7 +45,11 @@
 
 <title>DDoS Attack List | Delft Threat Intelligence Lab</title>
 
-<link rel="icon" href="/images/icon.png">
+<link rel="icon" href="/images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
 <meta name="title" content="DDoS Attack List">
 <meta name="description" content="Cybersecurity and Threat Intelligence Research at Delft University of Technology. The Delft Threat Intelligence Lab is a research group at the Delft University of Technology, focusing on cybersecurity and threat intelligence.">
@@ -78,7 +82,7 @@
     "headline": "DDoS Attack List",
     "publisher": {
       "@type": "Organization",
-      "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
+      "logo": { "@type": "ImageObject", "url": "/images/android-chrome-512x512.png" }
     },
     "url": "https://delftintellab.com"
   }
@@ -90,7 +94,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800" rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -355,126 +359,143 @@
 
 
 
-
-
-<header class="background" style="--image: url('/images/background.jpg')" data-dark="true">
-  <a href="/" class="home">
-    
-      <span class="logo">
-        
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+<header>
+  <div class="header-bar">
+    <a href="/" class="home" aria-label="Delft Threat Intelligence Lab, home">
+      
+        <span class="logo">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 72 100" width="72" height="100" class="mark" aria-hidden="true">
   <style>
-    .bubble {
-      animation: float 2s ease-out both infinite var(--delay);
-    }
-    @keyframes float {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      75% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(-40px);
-      }
-    }
+    .mark-dark { fill: var(--logo-row-dark, #1d3f9e); }
+    .mark-light { fill: var(--logo-row-light, #8da0d8); }
+    .mark-left { fill: var(--logo-edge-left, #2f7de1); }
+    .mark-right { fill: var(--logo-edge-right, #2c5fc4); }
+    .mark-red { fill: var(--landmark-red, #d7322b); }
+    .mark-hit { fill: var(--signal, #a4500a); }
   </style>
-  <g fill="currentColor" opacity="0.5">
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.1s"></circle>
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.4s"></circle>
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 1.1s"></circle>
-  </g>
-  <path fill="#38bdf8" d="
-      M 0 -22.5
-      L -19.5 -11.25
-      L -19.5 11.25
-      L 0 22.5
-      L 19.5 11.25
-      L 19.5 -11.25
-      z
-    "></path>
-  <path fill="#bae6fd" d="
-      M 0 -22.5
-      L -19.5 -11.25
-      L 0 0
-      L 19.5 -11.25
-      z
-    "></path>
-  <path fill="none" stroke="currentColor" stroke-width="5" d="
-      M -18 -53
-      L -10 -53
-      L -10 -29.2
-      L -30.3 -17.5
-      L -30.3 17.5
-      L 0 35
-      L 30.3 17.5
-      L 30.3 -17.5
-      L 10 -29.2
-      L 10 -53
-      L 18 -53
-    "></path>
+  <polygon class="mark-left" points="1.1,20.7 10.9,17.5 10.9,27.2 1.1,30.0"></polygon>
+  <polygon class="mark-dark" points="13.1,16.7 22.9,13.5 22.9,23.8 13.1,26.6"></polygon>
+  <polygon class="mark-dark" points="25.1,12.7 34.9,9.5 34.9,20.4 25.1,23.2"></polygon>
+  <polygon class="mark-dark" points="37.1,8.7 46.9,5.5 46.9,16.9 37.1,19.7"></polygon>
+  <polygon class="mark-right" points="49.1,4.7 58.9,1.5 58.9,13.5 49.1,16.3"></polygon>
+  <polygon class="mark-left" points="1.1,32.2 10.9,29.4 10.9,39.2 1.1,41.5"></polygon>
+  <polygon class="mark-light" points="13.1,28.8 22.9,26.0 22.9,36.3 13.1,38.6"></polygon>
+  <polygon class="mark-light" points="25.1,25.4 34.9,22.6 34.9,33.4 25.1,35.8"></polygon>
+  <polygon class="mark-light" points="37.1,21.9 46.9,19.1 46.9,30.6 37.1,32.9"></polygon>
+  <polygon class="mark-light" points="49.1,18.5 58.9,15.7 58.9,27.7 49.1,30.1"></polygon>
+  <polygon class="mark-left" points="1.1,43.7 10.9,41.4 10.9,51.1 1.1,53.0"></polygon>
+  <polygon class="mark-dark" points="13.1,40.8 22.9,38.5 22.9,48.8 13.1,50.7"></polygon>
+  <polygon class="mark-dark" points="25.1,38.0 34.9,35.6 34.9,46.5 25.1,48.4"></polygon>
+  <polygon class="mark-hit" points="37.1,35.1 46.9,32.8 46.9,44.3 37.1,46.1"></polygon>
+  <polygon class="mark-right" points="49.1,32.3 58.9,29.9 58.9,42.0 49.1,43.8"></polygon>
+  <polygon class="mark-left" points="1.1,55.2 10.9,53.3 10.9,63.1 1.1,64.5"></polygon>
+  <polygon class="mark-light" points="13.1,52.9 22.9,51.0 22.9,61.3 13.1,62.7"></polygon>
+  <polygon class="mark-light" points="25.1,50.6 34.9,48.7 34.9,59.6 25.1,61.0"></polygon>
+  <polygon class="mark-light" points="37.1,48.3 46.9,46.5 46.9,57.9 37.1,59.3"></polygon>
+  <polygon class="mark-light" points="49.1,46.0 58.9,44.2 58.9,56.2 49.1,57.6"></polygon>
+  <polygon class="mark-left" points="1.1,66.7 10.9,65.3 10.9,75.0 1.1,75.9"></polygon>
+  <polygon class="mark-dark" points="13.1,64.9 22.9,63.5 22.9,73.9 13.1,74.8"></polygon>
+  <polygon class="mark-dark" points="25.1,63.2 34.9,61.8 34.9,72.7 25.1,73.7"></polygon>
+  <polygon class="mark-dark" points="37.1,61.5 46.9,60.1 46.9,71.6 37.1,72.5"></polygon>
+  <polygon class="mark-right" points="49.1,59.8 58.9,58.4 58.9,70.4 49.1,71.4"></polygon>
+  <polygon class="mark-left" points="1.1,78.1 10.9,77.2 10.9,87.0 1.1,87.4"></polygon>
+  <polygon class="mark-light" points="13.1,77.0 22.9,76.1 22.9,86.4 13.1,86.8"></polygon>
+  <polygon class="mark-light" points="25.1,75.9 34.9,74.9 34.9,85.8 25.1,86.3"></polygon>
+  <polygon class="mark-light" points="37.1,74.7 46.9,73.8 46.9,85.2 37.1,85.7"></polygon>
+  <polygon class="mark-light" points="49.1,73.6 58.9,72.6 58.9,84.7 49.1,85.1"></polygon>
+  <polygon class="mark-left" points="1.1,89.6 10.9,89.2 10.9,98.9 1.1,98.9"></polygon>
+  <polygon class="mark-dark" points="13.1,89.0 22.9,88.6 22.9,98.9 13.1,98.9"></polygon>
+  <polygon class="mark-dark" points="25.1,88.5 34.9,88.0 34.9,98.9 25.1,98.9"></polygon>
+  <polygon class="mark-dark" points="37.1,87.9 46.9,87.4 46.9,98.9 37.1,98.9"></polygon>
+  <polygon class="mark-right" points="49.1,87.3 58.9,86.9 58.9,98.9 49.1,98.9"></polygon>
+  <polygon class="mark-red" points="61.7,2.5 71.0,10.1 71.0,20.9 61.7,14.4"></polygon>
+  <polygon class="mark-red" points="61.7,16.6 71.0,23.1 71.0,33.9 61.7,28.5"></polygon>
+  <polygon class="mark-red" points="61.7,30.7 71.0,36.1 71.0,46.9 61.7,42.6"></polygon>
+  <polygon class="mark-red" points="61.7,44.8 71.0,49.1 71.0,59.9 61.7,56.6"></polygon>
+  <polygon class="mark-red" points="61.7,58.8 71.0,62.1 71.0,72.9 61.7,70.7"></polygon>
+  <polygon class="mark-red" points="61.7,72.9 71.0,75.1 71.0,85.9 61.7,84.8"></polygon>
+  <polygon class="mark-red" points="61.7,87.0 71.0,88.1 71.0,98.9 61.7,98.9"></polygon>
 </svg>
 
-        
-      </span>
-    
-    
-      <span class="title-text" data-tooltip="Home">
-        
-          <span class="title">Delft Threat Intelligence Lab</span>
-        
-        
-      </span>
-    
-  </a>
+          
+        </span>
+      
+      
+        <span class="title-text">
+          
+            <span class="title">Delft Threat Intelligence Lab</span>
+          
+          <span class="subtitle">Delft University of Technology</span>
+        </span>
+      
+    </a>
 
-  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
+    <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 
-  <nav>
-    
-    
+    <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
+
+    <nav aria-label="Main">
       
-        <a href="/news/" data-tooltip="What is happening in DTIL">
-          news
-        </a>
       
-    
+        
+          <a href="/news/">
+            News
+          </a>
+        
       
-        <a href="/research/" data-tooltip="Published works">
-          Research
-        </a>
+        
+          <a href="/research/">
+            Research
+          </a>
+        
       
-    
+        
+          <a href="/projects/" aria-current="page">
+            Projects
+          </a>
+        
       
-        <a href="/projects/" data-tooltip="Software, datasets, and more">
-          Projects
-        </a>
+        
+          <a href="/team/">
+            Team
+          </a>
+        
       
-    
+        
+          <a href="/blog/">
+            Blog
+          </a>
+        
       
-        <a href="/team/" data-tooltip="About our team">
-          Team
-        </a>
+        
+          <a href="/contact/">
+            Contact
+          </a>
+        
       
-    
-      
-        <a href="/blog/" data-tooltip="Writeups">
-          Blog
-        </a>
-      
-    
-      
-        <a href="/contact/" data-tooltip="Email, address, and location">
-          Contact
-        </a>
-      
-    
-  </nav>
+    </nav>
+  </div>
+
+  
+
+  <svg class="skyline" viewbox="0 0 1280 240" preserveaspectratio="xMidYMax meet" role="img" aria-label="Delft skyline drawn in grid cells, with a worm spreading between buildings"><rect class="skyline-cell" x="240" y="80" width="13" height="13"></rect><rect class="skyline-glass" x="912" y="80" width="13" height="13"></rect><rect class="skyline-glass" x="928" y="80" width="13" height="13"></rect><rect class="skyline-glass" x="944" y="80" width="13" height="13"></rect><rect class="skyline-glass" x="960" y="80" width="13" height="13"></rect><rect class="skyline-glass" x="976" y="80" width="13" height="13"></rect><rect class="skyline-glass" x="992" y="80" width="13" height="13"></rect><rect class="skyline-red" x="1008" y="80" width="13" height="13"></rect><rect class="skyline-cell" x="240" y="96" width="13" height="13"></rect><rect class="skyline-cell" x="912" y="96" width="13" height="13"></rect><rect class="skyline-cell" x="928" y="96" width="13" height="13"></rect><rect class="skyline-cell" x="944" y="96" width="13" height="13"></rect><rect class="skyline-cell" x="960" y="96" width="13" height="13"></rect><rect class="skyline-cell" x="976" y="96" width="13" height="13"></rect><rect class="skyline-cell" x="992" y="96" width="13" height="13"></rect><rect class="skyline-lit" x="1008" y="96" width="13" height="13"></rect><rect class="skyline-cell" x="240" y="112" width="13" height="13"></rect><rect class="skyline-glass" x="912" y="112" width="13" height="13"></rect><rect class="skyline-glass" x="928" y="112" width="13" height="13"></rect><rect class="skyline-glass" x="944" y="112" width="13" height="13"></rect><rect class="skyline-glass" x="960" y="112" width="13" height="13"></rect><rect class="skyline-glass" x="976" y="112" width="13" height="13"></rect><rect class="skyline-glass" x="992" y="112" width="13" height="13"></rect><rect class="skyline-red" x="1008" y="112" width="13" height="13"></rect><rect class="skyline-cell" x="224" y="128" width="13" height="13"></rect><rect class="skyline-cell" x="240" y="128" width="13" height="13"></rect><rect class="skyline-cell" x="256" y="128" width="13" height="13"></rect><rect class="skyline-cell" x="912" y="128" width="13" height="13"></rect><rect class="skyline-cell" x="928" y="128" width="13" height="13"></rect><rect class="skyline-cell" x="944" y="128" width="13" height="13"></rect><rect class="skyline-cell" x="960" y="128" width="13" height="13"></rect><rect class="skyline-cell" x="976" y="128" width="13" height="13"></rect><rect class="skyline-cell" x="992" y="128" width="13" height="13"></rect><rect class="skyline-red" x="1008" y="128" width="13" height="13"></rect><rect class="skyline-cell" x="224" y="144" width="13" height="13"></rect><rect class="skyline-cell" x="240" y="144" width="13" height="13"></rect><rect class="skyline-cell" x="256" y="144" width="13" height="13"></rect><rect class="skyline-cell" x="432" y="144" width="13" height="13"></rect><rect class="skyline-cell" x="448" y="144" width="13" height="13"></rect><rect class="skyline-cell" x="464" y="144" width="13" height="13"></rect><rect class="skyline-glass" x="912" y="144" width="13" height="13"></rect><rect class="skyline-glass" x="928" y="144" width="13" height="13"></rect><rect class="skyline-glass" x="944" y="144" width="13" height="13"></rect><rect class="skyline-glass" x="960" y="144" width="13" height="13"></rect><rect class="skyline-glass" x="976" y="144" width="13" height="13"></rect><rect class="skyline-glass" x="992" y="144" width="13" height="13"></rect><rect class="skyline-red" x="1008" y="144" width="13" height="13"></rect><rect class="skyline-cell" x="208" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="224" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="240" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="256" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="272" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="432" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="448" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="464" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="624" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="656" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="672" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="704" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="912" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="928" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="944" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="960" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="976" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="992" y="160" width="13" height="13"></rect><rect class="skyline-red" x="1008" y="160" width="13" height="13"></rect><rect class="skyline-cell" x="208" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="224" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="240" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="256" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="272" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="416" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="432" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="448" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="464" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="480" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="656" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="672" y="176" width="13" height="13"></rect><rect class="skyline-glass" x="912" y="176" width="13" height="13"></rect><rect class="skyline-glass" x="928" y="176" width="13" height="13"></rect><rect class="skyline-glass" x="944" y="176" width="13" height="13"></rect><rect class="skyline-glass" x="960" y="176" width="13" height="13"></rect><rect class="skyline-glass" x="976" y="176" width="13" height="13"></rect><rect class="skyline-glass" x="992" y="176" width="13" height="13"></rect><rect class="skyline-red" x="1008" y="176" width="13" height="13"></rect><rect class="skyline-cell" x="128" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="144" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="192" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="208" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="224" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="240" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="256" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="272" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="288" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="416" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="432" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="448" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="464" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="480" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="640" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="656" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="672" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="688" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="800" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="816" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="832" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="848" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="864" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="880" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="896" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="912" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="928" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="944" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="960" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="976" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="992" y="192" width="13" height="13"></rect><rect class="skyline-red" x="1008" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="1024" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="1040" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="1056" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="1072" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="1088" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="1104" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="1120" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="1136" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="1152" y="192" width="13" height="13"></rect><rect class="skyline-cell" x="0" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="48" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="96" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="112" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="128" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="144" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="160" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="192" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="208" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="224" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="240" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="256" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="272" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="288" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="336" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="384" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="416" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="432" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="448" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="464" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="480" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="528" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="576" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="624" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="640" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="656" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="672" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="688" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="704" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="720" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="768" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="800" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="816" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="832" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="848" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="864" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="880" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="896" y="208" width="13" height="13"></rect><rect class="skyline-glass" x="912" y="208" width="13" height="13"></rect><rect class="skyline-glass" x="928" y="208" width="13" height="13"></rect><rect class="skyline-glass" x="944" y="208" width="13" height="13"></rect><rect class="skyline-glass" x="960" y="208" width="13" height="13"></rect><rect class="skyline-glass" x="976" y="208" width="13" height="13"></rect><rect class="skyline-glass" x="992" y="208" width="13" height="13"></rect><rect class="skyline-red" x="1008" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1024" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1040" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1056" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1072" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1088" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1104" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1120" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1136" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1152" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1200" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="1248" y="208" width="13" height="13"></rect><rect class="skyline-cell" x="0" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="16" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="32" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="48" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="64" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="80" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="96" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="112" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="128" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="144" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="160" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="176" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="192" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="208" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="224" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="240" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="256" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="272" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="288" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="304" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="320" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="336" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="352" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="368" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="384" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="400" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="416" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="432" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="448" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="464" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="480" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="496" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="512" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="528" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="544" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="560" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="576" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="592" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="608" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="624" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="640" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="656" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="672" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="688" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="704" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="720" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="736" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="752" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="768" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="784" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="800" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="816" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="832" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="848" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="864" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="880" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="896" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="912" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="928" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="944" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="960" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="976" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="992" y="224" width="13" height="13"></rect><rect class="skyline-red" x="1008" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1024" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1040" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1056" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1072" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1088" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1104" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1120" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1136" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1152" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1168" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1184" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1200" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1216" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1232" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1248" y="224" width="13" height="13"></rect><rect class="skyline-cell" x="1264" y="224" width="13" height="13"></rect><rect class="skyline-win skyline-w0" x="960" y="144" width="13" height="13"></rect><rect class="skyline-win skyline-w1" x="928" y="96" width="13" height="13"></rect><rect class="skyline-win skyline-w2" x="976" y="128" width="13" height="13"></rect><rect class="skyline-win skyline-w3" x="912" y="176" width="13" height="13"></rect><rect class="skyline-win skyline-w4" x="992" y="192" width="13" height="13"></rect><rect class="skyline-win skyline-w5" x="944" y="208" width="13" height="13"></rect><rect class="skyline-inf skyline-a0" x="128" y="208" width="13" height="13"></rect><rect class="skyline-inf skyline-a1" x="432" y="160" width="13" height="13"></rect><rect class="skyline-inf skyline-a1" x="448" y="192" width="13" height="13"></rect><rect class="skyline-inf skyline-a1" x="464" y="176" width="13" height="13"></rect><rect class="skyline-inf skyline-a2" x="656" y="176" width="13" height="13"></rect><rect class="skyline-inf skyline-a2" x="672" y="192" width="13" height="13"></rect><rect class="skyline-inf skyline-a3" x="832" y="208" width="13" height="13"></rect><rect class="skyline-inf skyline-a3" x="848" y="192" width="13" height="13"></rect><rect class="skyline-inf skyline-a3" x="864" y="208" width="13" height="13"></rect><rect class="skyline-inf skyline-a3" x="880" y="192" width="13" height="13"></rect><rect class="skyline-inf skyline-b0" x="800" y="192" width="13" height="13"></rect><rect class="skyline-inf skyline-b0" x="816" y="208" width="13" height="13"></rect><rect class="skyline-inf skyline-b1" x="576" y="208" width="13" height="13"></rect><rect class="skyline-inf skyline-b1" x="592" y="224" width="13" height="13"></rect><rect class="skyline-inf skyline-b2" x="336" y="208" width="13" height="13"></rect><rect class="skyline-inf skyline-b2" x="352" y="224" width="13" height="13"></rect><rect class="skyline-inf skyline-b3" x="272" y="160" width="13" height="13"></rect><rect class="skyline-inf skyline-b3" x="288" y="192" width="13" height="13"></rect><defs><mask id="skyline-mask-a1" maskunits="userSpaceOnUse" x="0" y="0" width="1280" height="240">
+          <path class="skyline-draw skyline-a1" d="M134.5 205 Q286 50 438.5 157" pathlength="1"></path>
+        </mask><mask id="skyline-mask-a2" maskunits="userSpaceOnUse" x="0" y="0" width="1280" height="240">
+          <path class="skyline-draw skyline-a2" d="M438.5 157 Q550 50 662.5 173" pathlength="1"></path>
+        </mask><mask id="skyline-mask-a3" maskunits="userSpaceOnUse" x="0" y="0" width="1280" height="240">
+          <path class="skyline-draw skyline-a3" d="M662.5 173 Q758 60 854.5 189" pathlength="1"></path>
+        </mask><mask id="skyline-mask-b1" maskunits="userSpaceOnUse" x="0" y="0" width="1280" height="240">
+          <path class="skyline-draw skyline-b1" d="M806.5 189 Q694.5 60 582.5 205" pathlength="1"></path>
+        </mask><mask id="skyline-mask-b2" maskunits="userSpaceOnUse" x="0" y="0" width="1280" height="240">
+          <path class="skyline-draw skyline-b2" d="M582.5 205 Q462.5 40 342.5 205" pathlength="1"></path>
+        </mask><mask id="skyline-mask-b3" maskunits="userSpaceOnUse" x="0" y="0" width="1280" height="240">
+          <path class="skyline-draw skyline-b3" d="M342.5 205 Q310.5 110 278.5 157" pathlength="1"></path>
+        </mask></defs>
+
+    <g class="skyline-worm"><path d="M134.5 205 Q286 50 438.5 157" mask="url(#skyline-mask-a1)"></path><path d="M438.5 157 Q550 50 662.5 173" mask="url(#skyline-mask-a2)"></path><path d="M662.5 173 Q758 60 854.5 189" mask="url(#skyline-mask-a3)"></path><path d="M806.5 189 Q694.5 60 582.5 205" mask="url(#skyline-mask-b1)"></path><path d="M582.5 205 Q462.5 40 342.5 205" mask="url(#skyline-mask-b2)"></path><path d="M342.5 205 Q310.5 110 278.5 157" mask="url(#skyline-mask-b3)"></path><rect class="skyline-box skyline-a0" x="125" y="205" width="19" height="19"></rect><rect class="skyline-box skyline-a1" x="429" y="157" width="19" height="19"></rect><rect class="skyline-box skyline-a2" x="653" y="173" width="19" height="19"></rect><rect class="skyline-box skyline-a3" x="845" y="189" width="19" height="19"></rect><rect class="skyline-box skyline-b0" x="797" y="189" width="19" height="19"></rect><rect class="skyline-box skyline-b1" x="573" y="205" width="19" height="19"></rect><rect class="skyline-box skyline-b2" x="333" y="205" width="19" height="19"></rect><rect class="skyline-box skyline-b3" x="269" y="157" width="19" height="19"></rect></g>
+</svg>
+
 </header>
 
     <main>
@@ -521,28 +542,96 @@ Please <a href="mailto:m.b.m.weyns@tudelft.nl">contact Maarten Weyns</a> to rece
     </main>
     
 
-
-<footer class="background" style="--image: url('/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
-    </div>
-  -->
-
-  <div>
-    
-  </div>
-
-  <div>
-    © 2026
-    Delft Threat Intelligence Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="home" aria-label="Delft Threat Intelligence Lab, home">
+      
+        <span class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 72 100" width="72" height="100" class="mark" aria-hidden="true">
+  <style>
+    .mark-dark { fill: var(--logo-row-dark, #1d3f9e); }
+    .mark-light { fill: var(--logo-row-light, #8da0d8); }
+    .mark-left { fill: var(--logo-edge-left, #2f7de1); }
+    .mark-right { fill: var(--logo-edge-right, #2c5fc4); }
+    .mark-red { fill: var(--landmark-red, #d7322b); }
+    .mark-hit { fill: var(--signal, #a4500a); }
+  </style>
+  <polygon class="mark-left" points="1.1,20.7 10.9,17.5 10.9,27.2 1.1,30.0"></polygon>
+  <polygon class="mark-dark" points="13.1,16.7 22.9,13.5 22.9,23.8 13.1,26.6"></polygon>
+  <polygon class="mark-dark" points="25.1,12.7 34.9,9.5 34.9,20.4 25.1,23.2"></polygon>
+  <polygon class="mark-dark" points="37.1,8.7 46.9,5.5 46.9,16.9 37.1,19.7"></polygon>
+  <polygon class="mark-right" points="49.1,4.7 58.9,1.5 58.9,13.5 49.1,16.3"></polygon>
+  <polygon class="mark-left" points="1.1,32.2 10.9,29.4 10.9,39.2 1.1,41.5"></polygon>
+  <polygon class="mark-light" points="13.1,28.8 22.9,26.0 22.9,36.3 13.1,38.6"></polygon>
+  <polygon class="mark-light" points="25.1,25.4 34.9,22.6 34.9,33.4 25.1,35.8"></polygon>
+  <polygon class="mark-light" points="37.1,21.9 46.9,19.1 46.9,30.6 37.1,32.9"></polygon>
+  <polygon class="mark-light" points="49.1,18.5 58.9,15.7 58.9,27.7 49.1,30.1"></polygon>
+  <polygon class="mark-left" points="1.1,43.7 10.9,41.4 10.9,51.1 1.1,53.0"></polygon>
+  <polygon class="mark-dark" points="13.1,40.8 22.9,38.5 22.9,48.8 13.1,50.7"></polygon>
+  <polygon class="mark-dark" points="25.1,38.0 34.9,35.6 34.9,46.5 25.1,48.4"></polygon>
+  <polygon class="mark-hit" points="37.1,35.1 46.9,32.8 46.9,44.3 37.1,46.1"></polygon>
+  <polygon class="mark-right" points="49.1,32.3 58.9,29.9 58.9,42.0 49.1,43.8"></polygon>
+  <polygon class="mark-left" points="1.1,55.2 10.9,53.3 10.9,63.1 1.1,64.5"></polygon>
+  <polygon class="mark-light" points="13.1,52.9 22.9,51.0 22.9,61.3 13.1,62.7"></polygon>
+  <polygon class="mark-light" points="25.1,50.6 34.9,48.7 34.9,59.6 25.1,61.0"></polygon>
+  <polygon class="mark-light" points="37.1,48.3 46.9,46.5 46.9,57.9 37.1,59.3"></polygon>
+  <polygon class="mark-light" points="49.1,46.0 58.9,44.2 58.9,56.2 49.1,57.6"></polygon>
+  <polygon class="mark-left" points="1.1,66.7 10.9,65.3 10.9,75.0 1.1,75.9"></polygon>
+  <polygon class="mark-dark" points="13.1,64.9 22.9,63.5 22.9,73.9 13.1,74.8"></polygon>
+  <polygon class="mark-dark" points="25.1,63.2 34.9,61.8 34.9,72.7 25.1,73.7"></polygon>
+  <polygon class="mark-dark" points="37.1,61.5 46.9,60.1 46.9,71.6 37.1,72.5"></polygon>
+  <polygon class="mark-right" points="49.1,59.8 58.9,58.4 58.9,70.4 49.1,71.4"></polygon>
+  <polygon class="mark-left" points="1.1,78.1 10.9,77.2 10.9,87.0 1.1,87.4"></polygon>
+  <polygon class="mark-light" points="13.1,77.0 22.9,76.1 22.9,86.4 13.1,86.8"></polygon>
+  <polygon class="mark-light" points="25.1,75.9 34.9,74.9 34.9,85.8 25.1,86.3"></polygon>
+  <polygon class="mark-light" points="37.1,74.7 46.9,73.8 46.9,85.2 37.1,85.7"></polygon>
+  <polygon class="mark-light" points="49.1,73.6 58.9,72.6 58.9,84.7 49.1,85.1"></polygon>
+  <polygon class="mark-left" points="1.1,89.6 10.9,89.2 10.9,98.9 1.1,98.9"></polygon>
+  <polygon class="mark-dark" points="13.1,89.0 22.9,88.6 22.9,98.9 13.1,98.9"></polygon>
+  <polygon class="mark-dark" points="25.1,88.5 34.9,88.0 34.9,98.9 25.1,98.9"></polygon>
+  <polygon class="mark-dark" points="37.1,87.9 46.9,87.4 46.9,98.9 37.1,98.9"></polygon>
+  <polygon class="mark-right" points="49.1,87.3 58.9,86.9 58.9,98.9 49.1,98.9"></polygon>
+  <polygon class="mark-red" points="61.7,2.5 71.0,10.1 71.0,20.9 61.7,14.4"></polygon>
+  <polygon class="mark-red" points="61.7,16.6 71.0,23.1 71.0,33.9 61.7,28.5"></polygon>
+  <polygon class="mark-red" points="61.7,30.7 71.0,36.1 71.0,46.9 61.7,42.6"></polygon>
+  <polygon class="mark-red" points="61.7,44.8 71.0,49.1 71.0,59.9 61.7,56.6"></polygon>
+  <polygon class="mark-red" points="61.7,58.8 71.0,62.1 71.0,72.9 61.7,70.7"></polygon>
+  <polygon class="mark-red" points="61.7,72.9 71.0,75.1 71.0,85.9 61.7,84.8"></polygon>
+  <polygon class="mark-red" points="61.7,87.0 71.0,88.1 71.0,98.9 61.7,98.9"></polygon>
+</svg>
+</span>
+      
+      <span class="title-text">
+        <span class="title">Delft Threat Intelligence Lab</span>
+        <span class="subtitle">Delft University of Technology</span>
+      </span>
     </a>
+
+    <nav class="footer-nav" aria-label="Footer">
+      
+      
+        <a href="/news/">News</a>
+      
+        <a href="/research/">Research</a>
+      
+        <a href="/projects/">Projects</a>
+      
+        <a href="/team/">Team</a>
+      
+        <a href="/blog/">Blog</a>
+      
+        <a href="/contact/">Contact</a>
+      
+    </nav>
   </div>
 
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+  
+
+  <div class="footer-legal">
+    © 2026
+    Delft Threat Intelligence Lab, Delft University of Technology.
+    Built with the
+    <a href="https://github.com/greenelab/lab-website-template">Lab Website Template</a>.
+  </div>
 </footer>
 
   </body>

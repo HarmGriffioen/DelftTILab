@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="motif" viewBox="0 0 240 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<rect class="motif-soft" x="50" y="2" width="12" height="12"/>
+<rect class="motif-soft" x="66" y="2" width="12" height="12"/>
+<rect class="motif-soft" x="146" y="2" width="12" height="12"/>
+<rect class="motif-soft" x="50" y="50" width="12" height="12"/>
+<rect class="motif-soft" x="194" y="50" width="12" height="12"/>
+<rect class="motif-soft" x="210" y="50" width="12" height="12"/>
+<rect class="motif-soft" x="18" y="66" width="12" height="12"/>
+<rect class="motif-soft" x="50" y="82" width="12" height="12"/>
+<rect class="motif-soft" x="66" y="130" width="12" height="12"/>
+<rect class="motif-soft" x="34" y="146" width="12" height="12"/>
+<rect class="motif-accent" x="2" y="98" width="12" height="12"/>
+<rect class="motif-accent" x="18" y="98" width="12" height="12"/>
+<rect class="motif-accent" x="2" y="114" width="12" height="12"/>
+<rect class="motif-accent" x="18" y="114" width="12" height="12"/>
+<rect class="motif-accent" x="66" y="98" width="12" height="12"/>
+<rect class="motif-accent" x="82" y="98" width="12" height="12"/>
+<rect class="motif-accent" x="66" y="114" width="12" height="12"/>
+<rect class="motif-accent" x="82" y="114" width="12" height="12"/>
+<rect class="motif-accent" x="130" y="98" width="12" height="12"/>
+<rect class="motif-accent" x="146" y="98" width="12" height="12"/>
+<rect class="motif-accent" x="130" y="114" width="12" height="12"/>
+<rect class="motif-signal" x="146" y="114" width="12" height="12"/>
+<rect class="motif-accent" x="194" y="98" width="12" height="12"/>
+<rect class="motif-accent" x="210" y="98" width="12" height="12"/>
+<rect class="motif-accent" x="194" y="114" width="12" height="12"/>
+<rect class="motif-accent" x="210" y="114" width="12" height="12"/>
+<rect class="motif-signal" x="178" y="18" width="12" height="12"/>
+<path class="motif-link" d="M24 104 L72 104"/>
+<path class="motif-link" d="M88 104 L136 104"/>
+<path class="motif-link" d="M152 104 L200 104"/>
+<rect class="motif-box" x="143" y="111" width="18" height="18"/>
+<rect class="motif-box" x="175" y="15" width="18" height="18"/>
+<path class="motif-arc" d="M152 111 Q193.9 4.0 184 15"/>
+</svg>

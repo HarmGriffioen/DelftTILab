@@ -6,7 +6,7 @@
   width: 350px;
   max-width: calc(100% - 20px - 20px);
   margin: 20px;
-  background: var(--background);
+  background: var(--surface-raised);
   border-radius: var(--rounded);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -39,12 +39,17 @@
 
 .card-title {
   font-family: var(--heading);
-  font-weight: var(--semi-bold);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: var(--bold);
+  letter-spacing: -0.01em;
 }
 
 .card-subtitle {
   margin-top: -10px !important;
-  font-style: italic;
+  color: var(--ink-muted);
+  font-size: 14px;
+  line-height: 20px;
 }
 
 /*# sourceMappingURL=card.css.map */

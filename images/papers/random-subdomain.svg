@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="motif" viewBox="0 0 240 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<rect class="motif-soft" x="210" y="34" width="12" height="12"/>
+<rect class="motif-soft" x="82" y="50" width="12" height="12"/>
+<rect class="motif-soft" x="18" y="98" width="12" height="12"/>
+<rect class="motif-soft" x="210" y="114" width="12" height="12"/>
+<rect class="motif-soft" x="34" y="146" width="12" height="12"/>
+<rect class="motif-ink" x="114" y="2" width="12" height="12"/>
+<rect class="motif-accent" x="50" y="50" width="12" height="12"/>
+<rect class="motif-accent" x="178" y="50" width="12" height="12"/>
+<rect class="motif-accent" x="34" y="98" width="12" height="12"/>
+<rect class="motif-accent" x="66" y="98" width="12" height="12"/>
+<rect class="motif-signal" x="130" y="98" width="12" height="12"/>
+<rect class="motif-signal" x="162" y="114" width="12" height="12"/>
+<rect class="motif-signal" x="194" y="98" width="12" height="12"/>
+<rect class="motif-signal" x="226" y="114" width="12" height="12"/>
+<rect class="motif-signal" x="146" y="130" width="12" height="12"/>
+<rect class="motif-signal" x="210" y="130" width="12" height="12"/>
+<rect class="motif-signal" x="178" y="146" width="12" height="12"/>
+<rect class="motif-signal" x="114" y="130" width="12" height="12"/>
+<path class="motif-link-ink" d="M120 8 L56 56"/>
+<path class="motif-link-ink" d="M120 8 L184 56"/>
+<path class="motif-link" d="M56 56 L40 104"/>
+<path class="motif-link" d="M56 56 L72 104"/>
+<path class="motif-arc" d="M184 47 Q160.0 39.7 136 95"/>
+<path class="motif-arc" d="M184 47 Q198.5 42.6 200 95"/>
+<path class="motif-arc" d="M184 47 Q184.6 42.6 168 111"/>
+<rect class="motif-box" x="175" y="47" width="18" height="18"/>
+</svg>

@@ -25,11 +25,19 @@
   flex-grow: 1;
 }
 
+.feature-text {
+  text-align: left;
+}
+
 .feature-title {
-  font-size: var(--large);
-  text-align: center;
+  margin-bottom: var(--space-3);
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  text-align: left;
   font-family: var(--heading);
-  font-weight: var(--semi-bold);
+  font-weight: var(--bold);
 }
 
 .feature[data-flip] {

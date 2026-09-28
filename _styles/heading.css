@@ -4,47 +4,56 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 40px 0 20px 0;
+  margin: var(--space-12) 0 var(--space-4) 0;
+  color: var(--ink);
   font-family: var(--heading);
-  font-weight: var(--semi-bold);
+  font-weight: var(--bold);
   text-align: left;
-  letter-spacing: 1px;
+  word-spacing: 0.06em;
+  text-wrap: balance;
 }
 
 h1 {
-  margin: 40px 0;
-  font-size: 1.6rem;
-  font-weight: var(--regular);
-  text-transform: uppercase;
-  text-align: center;
+  margin: var(--space-8) 0 var(--space-6) 0;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 1.6rem;
-  padding-bottom: 5px;
-  border-bottom: solid 1px var(--light-gray);
-  font-weight: var(--regular);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border-hair) solid var(--line);
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.01em;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.01em;
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 h5 {
-  font-size: 1.15rem;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: var(--semi-bold);
+  color: var(--ink-muted);
 }
 
 :where(h1, h2, h3, h4, h5, h6) > .icon {
-  margin-right: 1em;
-  color: var(--light-gray);
+  margin-right: 0.75em;
+  color: var(--accent);
 }
 
 /*# sourceMappingURL=heading.css.map */
