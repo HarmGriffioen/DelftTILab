@@ -240,6 +240,19 @@
   image: images/papers/mirai-to-gorilla.svg
   plugin: sources.py
   file: sources.yaml
+- id: doi:10.1109/EuroSP63326.2025.00017
+  title: 'All that Glitters is not Gold: Uncovering Exposed Industrial Control Systems
+    and Honeypots in the Wild'
+  authors:
+  - Martin Mladenov
+  - "L\xE1szl\xF3 Erd\u0151di"
+  - Georgios Smaragdakis
+  publisher: 2025 IEEE 10th European Symposium on Security and Privacy (EuroS&P)
+  date: '2025-06-30'
+  link: https://doi.org/hckrn3
+  image: images/papers/icshoney.jpg
+  plugin: sources.py
+  file: sources.yaml
 - title: 'MoZombie: A Case Study of the Self-Sustaining Mozi Botnet Architecture'
   authors:
   - M. Mohammed
