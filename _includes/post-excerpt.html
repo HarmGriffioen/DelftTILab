@@ -1,5 +1,5 @@
 {% if include.lookup %}
-  {% assign post = site.posts 
+  {% assign post = site.posts
     | where_exp: "post", "post.slug == include.lookup"
     | first
     | default: include
@@ -10,7 +10,13 @@
 
 <div class="post-excerpt-container">
   <div class="post-excerpt">
-    {% assign url = post.url | relative_url | uri_escape %}
+    {% if post.external_url %}
+        {% assign url = post.external_url | uri_escape %}
+        {% capture link_attrs %}target="_blank" rel="noopener noreferrer"{% endcapture %}
+    {% else %}
+        {% assign url = post.url | relative_url | uri_escape %}
+        {% assign link_attrs = "" %}
+    {% endif %}
     {% assign title = post.title %}
     {% assign image = post.image | relative_url | uri_escape %}
 
