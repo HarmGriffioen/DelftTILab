@@ -1,5 +1,22 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
+- id: doi:10.1145/3777912.3839810
+  title: 'Understanding Different Perspectives: Analyzing UDP Scanning Through Reactive
+    Telescopes'
+  authors:
+  - Dario Ferrero
+  - Andrea Sordello
+  - Harm Griffioen
+  - Idilio Drago
+  - Georgios Smaragdakis
+  - Marco Mellia
+  publisher: Proceedings of the 2026 ACM Internet Measurement Conference
+  date: '2026-10-12'
+  link: https://doi.org/hcmkxt
+  orcid: 0009-0004-0631-055X
+  dario-ferrero: true
+  plugin: orcid.py
+  file: orcid.yaml
 - id: doi:10.1145/3730567.3764498
   title: Have you SYN What I See? Analyzing TCP SYN Payloads in the Wild
   authors:
