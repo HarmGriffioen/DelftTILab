@@ -1,0 +1,72 @@
+.post-excerpt-container {
+  container-type: inline-size;
+}
+
+.post-excerpt {
+  display: flex;
+  margin: var(--space-6) 0;
+  border-radius: var(--rounded);
+  background: var(--surface-raised);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.post-excerpt-image {
+  position: relative;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.post-excerpt-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-excerpt-text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 30px;
+  text-align: left;
+}
+
+.post-excerpt-text > * {
+  margin: 0 !important;
+}
+
+.post-excerpt-text > a:first-child {
+  width: 100%;
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: var(--bold);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.post-excerpt-text > a:first-child:hover {
+  color: var(--accent);
+}
+
+.post-excerpt-text > div {
+  justify-content: flex-start;
+}
+
+.post-excerpt-text > p {
+  width: 100%;
+}
+
+@container (max-width: 800px) {
+  .post-excerpt {
+    flex-direction: column;
+  }
+  .post-excerpt-image {
+    width: unset;
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=post-excerpt.css.map */

@@ -1,0 +1,43 @@
+.hero-section,
+.callout {
+  margin: var(--space-8) 0;
+  padding: var(--space-8) var(--space-6);
+  border-top: var(--border-bar) solid var(--accent);
+  background: var(--surface-sunken);
+  text-align: left;
+}
+
+.callout {
+  padding: var(--space-6);
+  color: var(--ink);
+  font-weight: var(--semi-bold);
+}
+
+.callout p {
+  margin: 0;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-title {
+  margin: 0 0 var(--space-4) 0;
+  color: var(--ink);
+  font-family: var(--title);
+  font-weight: var(--heavy);
+  font-size: clamp(28px, 3.5vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  word-spacing: 0.06em;
+  text-wrap: balance;
+}
+
+.hero-content p:last-child {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/*# sourceMappingURL=research.css.map */

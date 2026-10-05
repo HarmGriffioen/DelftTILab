@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  text-align: center;
+  line-height: var(--spacing);
+}
+
+:focus-visible {
+  outline: var(--border-rule) solid var(--focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+/*# sourceMappingURL=body.css.map */

@@ -1,0 +1,102 @@
+[data-dark=false] {
+  --surface: #f7f5f0;
+  --surface-raised: #ffffff;
+  --surface-sunken: #ece8de;
+  --line: #d6d0c2;
+  --line-strong: #8a8577;
+  --ink: #14213d;
+  --ink-muted: #505a6e;
+  --accent: #1d3f9e;
+  --accent-soft: #e2e8f6;
+  --on-accent: #ffffff;
+  --signal: #a4500a;
+  --signal-soft: #f8ead8;
+  --on-signal: #ffffff;
+  --focus: #1d3f9e;
+  --header-bg: #1d3f9e;
+  --header-ink: #ffffff;
+  --header-muted: #dbe3f7;
+  --header-cell: #3c5ebd;
+  --header-signal: #f0a65c;
+  --header-logo-row: #5f7fd6;
+  --landmark-red: #d7322b;
+  --logo-row-dark: #1d3f9e;
+  --logo-row-light: #8da0d8;
+  --logo-edge-left: #2f7de1;
+  --logo-edge-right: #2c5fc4;
+}
+
+[data-dark=true] {
+  --surface: #0e1526;
+  --surface-raised: #16203a;
+  --surface-sunken: #0a101d;
+  --line: #2b3858;
+  --line-strong: #6b7aa0;
+  --ink: #eef1f7;
+  --ink-muted: #a8b1c6;
+  --accent: #93acf2;
+  --accent-soft: #1c2b57;
+  --on-accent: #0e1526;
+  --signal: #f0a65c;
+  --signal-soft: #3a2512;
+  --on-signal: #1a1006;
+  --focus: #93acf2;
+  --header-bg: #16203a;
+  --header-ink: #eef1f7;
+  --header-muted: #a8b1c6;
+  --header-cell: #2b3d73;
+  --header-signal: #f0a65c;
+  --header-logo-row: #4a5f9e;
+  --landmark-red: #ff6b5e;
+  --logo-row-dark: #3c6fd8;
+  --logo-row-light: #93acf2;
+  --logo-edge-left: #5aa2f5;
+  --logo-edge-right: #5a8ae6;
+}
+
+[data-dark] {
+  --primary: var(--accent);
+  --secondary: var(--accent-soft);
+  --text: var(--ink);
+  --background: var(--surface);
+  --background-alt: var(--surface-raised);
+  --light-gray: var(--line);
+  --gray: var(--ink-muted);
+  --dark-gray: var(--ink-muted);
+  --overlay: var(--line);
+}
+
+:root {
+  --title: "Archivo", sans-serif;
+  --heading: "Archivo", sans-serif;
+  --body: "Archivo", sans-serif;
+  --code: "JetBrains Mono", monospace;
+  --large: 1.125rem;
+  --xl: 1.25rem;
+  --xxl: 1.5rem;
+  --thin: 400;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --heavy: 800;
+  --spacing: 1.625;
+  --compact: 1.5;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --border-hair: 1px;
+  --border-rule: 2px;
+  --border-bar: 4px;
+  --rounded: 0;
+  --radius-full: 9999px;
+  --shadow: 0 0 0 var(--border-hair) var(--line);
+  --transition: 0.2s ease;
+}
+
+/*# sourceMappingURL=-theme.css.map */

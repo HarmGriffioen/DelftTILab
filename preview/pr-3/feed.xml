@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/preview/pr-3/feed.xml" rel="self" type="application/atom+xml" /><link href="/preview/pr-3/" rel="alternate" type="text/html" /><updated>2026-10-05T13:43:46+00:00</updated><id>/preview/pr-3/feed.xml</id><title type="html">Delft Threat Intelligence Lab</title><subtitle>The Delft Threat Intelligence Lab is a research group at the Delft University of Technology, focusing on cybersecurity and threat intelligence.</subtitle><entry><title type="html">DDoS-for-Hire services prove their power on exposed monitoring servers</title><link href="/preview/pr-3/2026/10/05/DDoS-Proofs.html" rel="alternate" type="text/html" title="DDoS-for-Hire services prove their power on exposed monitoring servers" /><published>2026-10-05T00:00:00+00:00</published><updated>2026-10-05T13:42:12+00:00</updated><id>/preview/pr-3/2026/10/05/DDoS-Proofs</id><content type="html" xml:base="/preview/pr-3/2026/10/05/DDoS-Proofs.html"><![CDATA[<p>Within the DDoS ecosystem, DDoS-for-Hire services have become increasingly popular. With many providers trying to attract the most customers, it is important for service providers to showcase their attack power. This is done with so-called DDoS “Power Proofs”.</p>
+
+<p>Read the full article <a href="https://maartenweyns.com/ddos-for-hire-services-prove-their-power-on-exposed-monitoring-servers/">Maarten Weyns’ blog</a>.</p>]]></content><author><name>maarten-weyns</name></author><category term="ddos," /><category term="botnets," /><category term="ddos-for-hire," /><category term="booter" /><summary type="html"><![CDATA[Within the DDoS ecosystem, DDoS-for-Hire services have become increasingly popular. With many providers trying to attract the most customers, it is important for service providers to showcase their attack power. This is done with so-called DDoS “Power Proofs”.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/preview/pr-3/images/botnet-boasting.jpeg" /><media:content medium="image" url="/preview/pr-3/images/botnet-boasting.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Decoy Databases</title><link href="/preview/pr-3/2025/11/28/Decoy-Databases.html" rel="alternate" type="text/html" title="Decoy Databases" /><published>2025-11-28T00:00:00+00:00</published><updated>2026-10-05T13:42:12+00:00</updated><id>/preview/pr-3/2025/11/28/Decoy-Databases</id><content type="html" xml:base="/preview/pr-3/2025/11/28/Decoy-Databases.html"><![CDATA[<h1 id="decoy-databases-analyzing-attacks-on-public-facing-databases">Decoy Databases: Analyzing Attacks on Public Facing Databases</h1>
+
+<p><em>Published on November 28th, 2025 by the Delft Threat Intelligence Lab</em></p>
+
+<p>As more of our social, commercial, and educational lives move online, databases have become critical to supporting digital services. However, their exposure to the Internet, often due to misconfiguration or vulnerabilities, makes them attractive targets for attackers. A recent study by researchers at the TU Delft Threat Intelligence Lab investigates real-world attacks on public-facing database management systems (DBMS) using honeypots.</p>
+
+<h2 id="what-is-a-honeypot">What Is a Honeypot?</h2>
+
+<p>A Honeypot is a emulated environment set to detect, deflect, or, in some manner, counteract attempts at unauthorized use of information systems.</p>
+
+<h2 id="the-study">The Study</h2>
+
+<p>The team deployed <strong>278 honeypots</strong> over 20 days in March–April 2024 to monitor attacks targeting MySQL, MSSQL, PostgreSQL, and Redis databases. This setup included:</p>
+
+<ul>
+  <li><strong>220 low-interaction honeypots</strong>, which allowed the researchers to measure scanning and brute-force activity.</li>
+  <li><strong>58 medium/high-interaction honeypots</strong>, which enabled observation of active exploitation techniques.</li>
+</ul>
+
+<h2 id="key-findings">Key Findings</h2>
+
+<ol>
+  <li><strong>Scanning Is Moderate but Persistent</strong>: Around 3,000 unique IPs attempted to scan or access the honeypots, and brute-force login attempts were common.</li>
+  <li><strong>Three Types of Exploitation</strong>:
+    <ul>
+      <li>Direct attacks on the DBMS to manipulate or extract data.</li>
+      <li>Ransom-driven attacks that copy or delete database contents.</li>
+      <li>Use of the database as a pivot to compromise the underlying system.</li>
+    </ul>
+  </li>
+  <li><strong>DBMS-Specific Threats</strong>: Attacks on databases are distinct from those targeting general Internet-facing systems, highlighting the need for focused defense strategies.</li>
+</ol>
+
+<h2 id="why-this-matters">Why This Matters</h2>
+
+<p>Databases are no longer just backend tools—they often accelerate front-end applications, reduce query response times, and enhance user engagement. Their critical role and the sensitive data they store make them high-value targets. This study provides:</p>
+
+<ul>
+  <li>A detailed classification of attacker behavior into scanning, scouting, and exploiting.</li>
+  <li>Insights into adversary sequences and behavioral patterns.</li>
+  <li>The first publicly available dataset specifically focused on DBMS attacks.</li>
+</ul>
+
+<p>By understanding these attack patterns, organizations can better defend their public-facing databases and mitigate risks before attackers succeed.</p>
+
+<h2 id="read-the-paper">Read the Paper</h2>
+
+<p>You can access the full publication on acm:</p>
+
+<p><a href="https://dl.acm.org/doi/abs/10.1145/3730567.3764481">Decoy Databases: Analyzing Attacks on Public Facing Databases</a></p>
+
+<hr />
+
+<p><em>This blog post summarizes research conducted by the Delft Threat Intelligence Lab. For a complete explanation of methods and results, refer to the original paper.</em></p>]]></content><author><name>Yuqian-Song</name></author><category term="Honeypots," /><category term="Scanning," /><category term="Databases," /><category term="Malware" /><summary type="html"><![CDATA[Decoy Databases: Analyzing Attacks on Public Facing Databases]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/preview/pr-3/images/disk.jpg" /><media:content medium="image" url="/preview/pr-3/images/disk.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">ACM IMC 2025 - TCP SYN Payloads</title><link href="/preview/pr-3/2025/11/28/IMC-25-TCP-SYN-Payloads.html" rel="alternate" type="text/html" title="ACM IMC 2025 - TCP SYN Payloads" /><published>2025-11-28T00:00:00+00:00</published><updated>2026-10-05T13:42:12+00:00</updated><id>/preview/pr-3/2025/11/28/IMC-25-TCP-SYN-Payloads</id><content type="html" xml:base="/preview/pr-3/2025/11/28/IMC-25-TCP-SYN-Payloads.html"><![CDATA[<h1 id="highlights-from-the-2025-acm-imc-conference">Highlights from the 2025 ACM IMC Conference</h1>
+
+<p><em>Published on December 1st, 2025 by the Delft Threat Intelligence Lab</em></p>
+
+<p>During the week of October 27th to the 31st, the team attended the 2025 ACM Internet Measurement Conference in Madison, WI.
+Yuqian presented his <a href="http://delftintellab.com/2025/11/28/Decoy-Databases.html">full paper on Decoy Databases</a> and Dario presented his short paper on TCP SYN Payloads.</p>
+
+<p>The whole event has been a formative experience: we were able to attend high-level presentations and to learn about several research directions in the field of Internet Measurements. The feeling of community was strong over the course of the conference, and we hope to be back in the future!</p>
+
+<h2 id="have-you-syn-what-i-see-analyzing-tcp-syn-payloads-in-the-wild">Have you SYN What I See? Analyzing TCP SYN Payloads in the Wild</h2>
+
+<p>The paper addresses a form of unsolicited Internet traffic yet unexplored by the literature, that is TCP SYN packets carrying an application payload. Over two years of data collected by our Network Telescope, we record over 200 million of these events and provide a complete characterization of their content while attempting to explain the objectives behind this anomalous traffic.</p>
+
+<h2 id="key-findings">Key Findings</h2>
+
+<ol>
+  <li><strong>Traffic is attributable to Internet Scans</strong>: we observe for almost all traffic well-known fingerprints for scanning tools and irregular header values for TCP SYNs, indicating that their origin is to be attributed to intentional scanning and not misconfigurations.</li>
+  <li><strong>OS Fingerprinting can be ruled out as an explanation</strong>: we try to determine if these scans are Operating System Fingerprinting attempts. We do so by setting up a virtualized environment and replaying subsets of TCP SYN + Payload data against multiple OS versions, without finding any behavioral difference between the tested set.</li>
+  <li><strong>HTTP GETs are most common, but Zyxel scans raise concerns</strong>: the application layer payloads show that more than three quarters are simple HTTP GET scans attributable to research scans. On the other hand, we record several scans targeting TCP port 0 and Zyxel infrastructure.</li>
+</ol>
+
+<h2 id="why-this-matters">Why this matters</h2>
+
+<p>This type of event is known to trigger interference by middleboxes and firewalls, and while previous work has hinted to the presence of this traffic “in the wild”, to this day no major work has provided a full overview of the requests it contains. While we observe that the majority of these  can be related to studies on Internet Censorship, a significant share can be linked to suspicious reconnaissance targeting Zyxel equipment. Through the vantage point of our large Network Telescope we provide a view as complete as possible, but still warn to keep this traffic under observation.</p>
+
+<h2 id="relevant-links-and-references">Relevant links and references</h2>
+
+<p>You can access the full publication on the ACM Digital Library:</p>
+<ul>
+  <li><a href="https://dl.acm.org/doi/10.1145/3730567.3764498">Have you SYN What I See? Analyzing TCP SYN Payloads in the Wild</a></li>
+</ul>
+
+<hr />
+
+<p><em>This blog post summarizes research conducted by the Delft Threat Intelligence Lab. For a complete explanation of methods and results, refer to the original papers.</em></p>]]></content><author><name>dario-ferrero</name></author><category term="conference," /><category term="network-telescope," /><category term="scanning" /><summary type="html"><![CDATA[Highlights from the 2025 ACM IMC Conference]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/preview/pr-3/images/imc-2025-squad.jpeg" /><media:content medium="image" url="/preview/pr-3/images/imc-2025-squad.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Can a Tarpit Clean Up the Internet?</title><link href="/preview/pr-3/2025/06/05/Can-a-Tarpit-Clean-Up-the-Internet.html" rel="alternate" type="text/html" title="Can a Tarpit Clean Up the Internet?" /><published>2025-06-05T00:00:00+00:00</published><updated>2026-10-05T13:42:12+00:00</updated><id>/preview/pr-3/2025/06/05/Can-a-Tarpit-Clean-Up-the-Internet</id><content type="html" xml:base="/preview/pr-3/2025/06/05/Can-a-Tarpit-Clean-Up-the-Internet.html"><![CDATA[<h1 id="can-a-tarpit-clean-up-the-internet-a-closer-look-at-worm-containment-strategies">Can a Tarpit Clean Up the Internet? A Closer Look at Worm Containment Strategies</h1>
+
+<p><em>Published on June 5, 2025 by the Delft Threat Intelligence Lab</em></p>
+
+<p>In the ever-evolving landscape of cybersecurity threats, Internet worms remain a persistent challenge. These self-replicating programs can spread rapidly across networks, exploiting vulnerabilities and causing widespread disruption. A recent study by researchers at the Threat Intelligence Lab of the TU Delft explores an intriguing question: Can we use “tarpits” to slow down or even halt the spread of these worms?</p>
+
+<h2 id="what-is-a-tarpit">What Is a Tarpit?</h2>
+
+<p>A tarpit is a network defense mechanism designed to intentionally delay or trap malicious connections. By responding slowly or not at all to certain network requests, a tarpit can tie up the resources of an attacking system, effectively slowing down its ability to spread malware or perform other malicious activities.</p>
+
+<h2 id="the-study">The Study</h2>
+
+<p>The research, presented at the 2023 IEEE European Symposium on Security and Privacy Workshops, investigates the feasibility of tarpits as a defense against Internet worms. The team employed:</p>
+
+<ul>
+  <li><strong>Simulations of Worm Propagation</strong>: Modeling how different types of worms spread across networks.</li>
+  <li><strong>Tarpit Implementations</strong>: Deploying several tarpit strategies to assess their practical effectiveness.</li>
+  <li><strong>Performance Metrics</strong>: Measuring delay, resource consumption, and impact on worm containment.</li>
+</ul>
+
+<h2 id="key-findings">Key Findings</h2>
+
+<ul>
+  <li><strong>Effectiveness Depends on Context</strong>: Tarpit success varies significantly depending on the worm’s behavior and the network’s structure.</li>
+  <li><strong>Trade-offs in Performance</strong>: Tarpits can consume system resources and introduce delays, potentially affecting legitimate traffic.</li>
+  <li><strong>Supportive Role</strong>: Tarpits are most effective as part of a layered security approach, complementing other tools like firewalls and detection systems.</li>
+</ul>
+
+<h2 id="why-this-matters">Why This Matters</h2>
+
+<p>This study revisits an underexplored method in cybersecurity and evaluates its practical viability in modern networks. While tarpits are not a silver bullet, they can be useful in specific scenarios, particularly when trying to slow down the early stages of a worm outbreak.</p>
+
+<h2 id="read-the-paper">Read the Paper</h2>
+
+<p>You can access the full publication on IEEE Xplore:</p>
+
+<p><a href="https://ieeexplore.ieee.org/document/10179467">Could you clean up the Internet with a Pit of Tar? Investigating tarpit feasibility on Internet worms</a></p>
+
+<hr />
+
+<p><em>This blog post summarizes research conducted by the Delft Threat Intelligence Lab. For a complete explanation of methods and results, refer to the original paper.</em></p>]]></content><author><name>harm-griffioen</name></author><category term="botnets," /><category term="tarpit," /><category term="Mirai" /><summary type="html"><![CDATA[Can a Tarpit Clean Up the Internet? A Closer Look at Worm Containment Strategies]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/preview/pr-3/images/tarpit.png" /><media:content medium="image" url="/preview/pr-3/images/tarpit.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
