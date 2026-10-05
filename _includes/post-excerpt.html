@@ -11,11 +11,11 @@
 <div class="post-excerpt-container">
   <div class="post-excerpt">
     {% if post.link %}
-        {% assign url = post.link | uri_escape %}
-        {% capture link_attrs %}target="_blank" rel="noopener noreferrer"{% endcapture %}
+      {% assign url = post.link | uri_escape %}
+      {% capture link_attrs %}target="_blank" rel="noopener noreferrer"{% endcapture %}
     {% else %}
-        {% assign url = post.url | relative_url | uri_escape %}
-        {% assign link_attrs = "" %}
+      {% assign url = post.url | relative_url | uri_escape %}
+      {% assign link_attrs = "" %}
     {% endif %}
     {% assign title = post.title %}
     {% assign image = post.image | relative_url | uri_escape %}
@@ -23,6 +23,7 @@
     {% if image %}
       <a
         href="{{ url }}"
+        {{ link_attrs }}
         class="post-excerpt-image"
         aria-label="{{ title | default: "excerpt link" | regex_strip }}"
       >
@@ -36,7 +37,7 @@
     {% endif %}
 
     <div class="post-excerpt-text">
-      <a href="{{ url }}">{{ title }}</a>
+      <a href="{{ url }}" {{ link_attrs }}>{{ title }}</a>
 
       {%
         include post-info.html
