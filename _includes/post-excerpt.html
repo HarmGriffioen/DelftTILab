@@ -10,8 +10,8 @@
 
 <div class="post-excerpt-container">
   <div class="post-excerpt">
-    {% if post.external_url %}
-        {% assign url = post.external_url | uri_escape %}
+    {% if post.link %}
+        {% assign url = post.link | uri_escape %}
         {% capture link_attrs %}target="_blank" rel="noopener noreferrer"{% endcapture %}
     {% else %}
         {% assign url = post.url | relative_url | uri_escape %}
